@@ -10,9 +10,9 @@ project <- read.csv('data.csv')
 
 ## start writing your R code from here
 
+library(ggplot2)
 
-
-
+ggplot(project, aes(x=LTR, y=AgeRange, color=GP_Tier)) + geom_point()
 ## end your R code and logic 
 
 ####################################
