@@ -32,7 +32,7 @@ project <- project[complete.cases(project), ]
 project$StateAbb <- as.factor(project$StateAbb)
 
 #Redefining levels of GP_Tier, grouping duplicate levels
-levels(project$GP_Tier) <- c("", "Card", "Courtesy", "Diamond", "Diamond", "Gold", "Gold", "Lifetime Diamond", "Lifetime Diamond", "Platinium", "Platinium")
+levels(project$GP_Tier) <- c("None", "Card", "Courtesy", "Diamond", "Diamond", "Gold", "Gold", "Lifetime Diamond", "Lifetime Diamond", "Platinium", "Platinium")
 
 
 
