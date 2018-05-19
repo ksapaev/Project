@@ -9,12 +9,14 @@ raw <- read.csv('raw_data.csv')
 ####################################
 
 ## start writing your R code from here
-library(dplyr)
 
+#Converting State abbrivations as Characters
 raw$STATE_R <- as.character(raw$STATE_R)
 
+#Filtering by US states and saving the dataset as "df"
 df <- raw[raw$STATE_R %in% state.abb,]
 
+#Selecting necessary columns for the project under the dataset "project"
 project <- data.frame(LTR = df$Likelihood_Recommend_H, Hotel_Condition = df$Condition_Hotel_H, Staff_Cared = df$Staff_Cared_H,
                       Customer_Service = df$Customer_SVC_H, Room_Satisfy = df$Guest_Room_H, NPS = df$NPS_Type, 
                       Reservation = df$RESERVATION_DATE_R, CheckIn = df$CHECK_IN_DATE_C, CheckOut = df$CHECK_OUT_DATE_C, 
@@ -23,19 +25,17 @@ project <- data.frame(LTR = df$Likelihood_Recommend_H, Hotel_Condition = df$Cond
                       Country = df$Country_PL, Region = df$Region_PL, Location = df$Location_PL, Revenue = df$REVENUE_USD_R, 
                       Relationship = df$Relationship_PL, stringsAsFactors=FALSE)
 
+#Dropping all rows with NAs
 project <- project[complete.cases(project), ]
 
-
-str(project$STATE_R)
-#project <- na.omit(project)
-head(project,20)
+#Converting state abbrivations as factors
+project$StateAbb <- as.factor(project$StateAbb)
 
 
-summary(project$Relationship_PL)
+#str(project)
+#head(project,20)
+#summary(project)
 
-
-
-project[project$Guest_Country_H=="Switzerland",]
 
 
 
@@ -44,6 +44,6 @@ project[project$Guest_Country_H=="Switzerland",]
 
 ####################################
 ##### write output file ############
-write.csv(df, file = 'data.csv')
+write.csv(project, file = 'data.csv')
 ####################################
 
