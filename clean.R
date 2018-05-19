@@ -20,17 +20,18 @@ project <- df %>% filter(STATE_R %in% state.abb & !is.na(Likelihood_Recommend_H)
 
 project$STATE_R <- as.factor(project$STATE_R)
 
-df$POV_CODE_C
+df$Guest_Room_H
 
 
 
 project <- df %>% filter(STATE_R %in% state.abb) %>%
-  select(Likelihood_Recommend_H, Condition_Hotel_H, Staff_Cared_H, NPS_Type, RESERVATION_DATE_R, CHECK_IN_DATE_C, CHECK_OUT_DATE_C, LENGTH_OF_STAY_C, STATE_R, Age_Range_H, Gender_H, GP_Tier, POV_CODE_C, Hotel.Name.Long_PL, City_PL, Country_PL)
+  select(Likelihood_Recommend_H, Condition_Hotel_H, Staff_Cared_H, Customer_SVC_H, Guest_Room_H, NPS_Type, RESERVATION_DATE_R, CHECK_IN_DATE_C, CHECK_OUT_DATE_C, LENGTH_OF_STAY_C, 
+         STATE_R, Age_Range_H, Gender_H, GP_Tier, POV_CODE_C, Brand_PL, City_PL,  Country_PL, Region_PL, REVENUE_USD_R)
 
 project <- project[complete.cases(project), ]
 
 #project <- na.omit(project)
-head(project)
+head(project,20)
 
 
 
