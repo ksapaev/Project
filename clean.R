@@ -20,7 +20,7 @@ df <- raw[raw$STATE_R %in% state.abb,]
 project <- data.frame(LTR = df$Likelihood_Recommend_H, Hotel_Condition = df$Condition_Hotel_H, Staff_Cared = df$Staff_Cared_H,
                       Customer_Service = df$Customer_SVC_H, Room_Satisfy = df$Guest_Room_H, NPS = df$NPS_Type, 
                       Reservation = df$RESERVATION_DATE_R, CheckIn = df$CHECK_IN_DATE_C, CheckOut = df$CHECK_OUT_DATE_C, 
-                      LengthStay = df$LENGTH_OF_STAY_C, RoomType = df$ROOM_TYPE_CODE_C, StateAbb = df$STATE_R, AgeRange = df$Age_Range_H, Gender = df$Gender_H,
+                      LengthStay = df$LENGTH_OF_STAY_C, RoomType = df$ROOM_TYPE_CODE_R, StateAbb = df$STATE_R, AgeRange = df$Age_Range_H, Gender = df$Gender_H,
                       GP_Tier = df$GP_Tier, POV = df$POV_CODE_C, Brand = df$Brand_PL, City = df$City_PL, 
                       Country = df$Country_PL, Region = df$Region_PL, Location = df$Location_PL, Revenue = df$REVENUE_USD_R, 
                       Relationship = df$Relationship_PL, stringsAsFactors=FALSE)
@@ -37,7 +37,7 @@ project$StateAbb <- as.factor(project$StateAbb)
 summary(project$RoomType)
 
 
-
+View(df[df$Region != "Americas",])
 
 
 ## end your R code and logic 
