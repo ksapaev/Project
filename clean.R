@@ -32,23 +32,16 @@ project <- project[complete.cases(project), ]
 project$StateAbb <- as.factor(project$StateAbb)
 
 #Redefining levels of GP_Tier, grouping duplicate levels
-levels(project$GP_Tier) <- c("", "", "Courtesy", "Diamond", "Diamond", "Gold", "Gold", "Lifetime Diamond", "Lifetime Diamond", "Platinium", "Platinium")
+levels(project$GP_Tier) <- c("", "Card", "Courtesy", "Diamond", "Diamond", "Gold", "Gold", "Lifetime Diamond", "Lifetime Diamond", "Platinium", "Platinium")
 
 
 
 #str(project)
 #head(project,20)
-summary(project)
+#summary(project)
+#summary(project$RoomType, maxsum = length(levels(project$RoomType)))
 
 
-
-
-
-levels(project$City)
-
-summary(project$City, maxsum = length(levels(project$City)))
-
-summary(project$GP_Tier)
 
 ## end your R code and logic 
 
