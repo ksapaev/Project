@@ -22,8 +22,8 @@ project <- data.frame(LTR = df$Likelihood_Recommend_H, Hotel_Condition = df$Cond
                       Reservation = df$RESERVATION_DATE_R, CheckIn = df$CHECK_IN_DATE_C, CheckOut = df$CHECK_OUT_DATE_C, 
                       LengthStay = df$LENGTH_OF_STAY_C, RoomType = df$ROOM_TYPE_CODE_R, StateAbb = df$STATE_R, AgeRange = df$Age_Range_H, Gender = df$Gender_H,
                       GP_Tier = df$GP_Tier, POV = df$POV_CODE_C, Brand = df$Brand_PL, City = df$City_PL, 
-                      Country = df$Country_PL, Region = df$Region_PL, Location = df$Location_PL, Revenue = df$REVENUE_USD_R, 
-                      Relationship = df$Relationship_PL, stringsAsFactors=FALSE)
+                      Country = df$Country_PL, Region = df$Region_PL, Location = df$Location_PL, Longitude = df$Property.Longitude_PL, Latitude = df$Property.Latitude_PL, DomInt = df$Dom.Int.l_PL, Revenue = df$REVENUE_USD_R, 
+                      Class = df$Class_PL , BookingChannel = df$Booking_Channel, Relationship = df$Relationship_PL, stringsAsFactors=FALSE)
 
 #Dropping all rows with NAs
 project <- project[complete.cases(project), ]
@@ -31,14 +31,24 @@ project <- project[complete.cases(project), ]
 #Converting state abbrivations as factors
 project$StateAbb <- as.factor(project$StateAbb)
 
+#Redefining levels of GP_Tier, grouping duplicate levels
+levels(project$GP_Tier) <- c("", "", "Courtesy", "Diamond", "Diamond", "Gold", "Gold", "Lifetime Diamond", "Lifetime Diamond", "Platinium", "Platinium")
+
+
 
 #str(project)
 #head(project,20)
-summary(project$RoomType)
+summary(project)
 
 
-View(df[df$Region != "Americas",])
 
+
+
+levels(project$City)
+
+summary(project$City, maxsum = length(levels(project$City)))
+
+summary(project$GP_Tier)
 
 ## end your R code and logic 
 
