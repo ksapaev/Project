@@ -5,31 +5,28 @@ setwd(Sys.getenv('PROJECT_HOME'))
 
 ####################################
 ## write code to read input csv into data frame
-df <- read.csv('raw_data.csv')
+raw <- read.csv('raw_data.csv')
 ####################################
 
 ## start writing your R code from here
 library(dplyr)
 
-df$STATE_R <- as.character(df$STATE_R)
+raw$STATE_R <- as.character(raw$STATE_R)
 
-project <- df %>% filter(STATE_R %in% state.abb & !is.na(Likelihood_Recommend_H) & !is.na(Condition_Hotel_H) &!is.na(Staff_Cared_H) & !is.na(NPS_Type) & !is.na(Gender_H) & 
-                         !is.na(df$LENGTH_OF_STAY_C) & !is.na(df$Age_Range_H) & !is.na(df$GP_Tier) & !is.na(Hotel.Name.Long_PL) &
-                         !is.na(CHECK_IN_DATE_C) & !is.na(CHECK_OUT_DATE_C) & !is.na(POV_CODE_C) ) %>%
-                  select(Likelihood_Recommend_H, NPS_Type, CHECK_IN_DATE_C, CHECK_OUT_DATE_C, LENGTH_OF_STAY_C, STATE_R, Age_Range_H, Gender_H, GP_Tier, POV_CODE_C, Hotel.Name.Long_PL, City_PL, Country_PL)
+df <- raw[raw$STATE_R %in% state.abb,]
 
-project$STATE_R <- as.factor(project$STATE_R)
-
-df$Room_Type_H
-
-
-
-project <- df %>% filter(STATE_R %in% state.abb) %>%
-  select(Likelihood_Recommend_H, Condition_Hotel_H, Staff_Cared_H, Customer_SVC_H, Guest_Room_H, NPS_Type, RESERVATION_DATE_R, CHECK_IN_DATE_C, CHECK_OUT_DATE_C, LENGTH_OF_STAY_C, 
-         STATE_R, Age_Range_H, Gender_H, GP_Tier, POV_CODE_C, Brand_PL, City_PL,  Country_PL, Region_PL, Location_PL,REVENUE_USD_R, Relationship_PL)
+project <- data.frame(LTR = df$Likelihood_Recommend_H, Hotel_Condition = df$Condition_Hotel_H, Staff_Cared = df$Staff_Cared_H,
+                      Customer_Service = df$Customer_SVC_H, Room_Satisfy = df$Guest_Room_H, NPS = df$NPS_Type, 
+                      Reservation = df$RESERVATION_DATE_R, CheckIn = df$CHECK_IN_DATE_C, CheckOut = df$CHECK_OUT_DATE_C, 
+                      LengthStay = df$LENGTH_OF_STAY_C, StateAbb = df$STATE_R, AgeRange = df$Age_Range_H, Gender = df$Gender_H,
+                      GP_Tier = df$GP_Tier, POV = df$POV_CODE_C, Brand = df$Brand_PL, City = df$City_PL, 
+                      Country = df$Country_PL, Region = df$Region_PL, Location = df$Location_PL, Revenue = df$REVENUE_USD_R, 
+                      Relationship = df$Relationship_PL, stringsAsFactors=FALSE)
 
 project <- project[complete.cases(project), ]
 
+
+str(project$STATE_R)
 #project <- na.omit(project)
 head(project,20)
 
