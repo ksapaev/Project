@@ -39,7 +39,7 @@ levels(project$GP_Tier) <- c("None", "Card", "Courtesy", "Diamond", "Diamond", "
 #str(project)
 #head(project,20)
 #summary(project)
-#summary(project$RoomType, maxsum = length(levels(project$RoomType)))
+#summary(project$GP_Tier, maxsum = length(levels(project$GP_Tier)))
 
 
 
