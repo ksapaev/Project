@@ -12,13 +12,13 @@ raw <- read.csv('raw_data.csv')
 
 #Converting State abbrivations as Characters
 raw$STATE_R <- as.character(raw$STATE_R)
-
+raw$ROOM_TYPE_CODE_R <- as.character(raw$ROOM_TYPE_CODE_R)
 #Filtering by US states and saving the dataset as "df"
 df <- raw[raw$STATE_R %in% state.abb,]
 
 #Selecting necessary columns for the project under the dataset "project"
 project <- data.frame(LTR = df$Likelihood_Recommend_H, Hotel_Condition = df$Condition_Hotel_H, Staff_Cared = df$Staff_Cared_H,
-                      Customer_Service = df$Customer_SVC_H, Room_Satisfy = df$Guest_Room_H, NPS = df$NPS_Type, 
+                      Customer_Service = df$Customer_SVC_H, CheckIn = df$Check_In_H, Room_Satisfy = df$Guest_Room_H, NPS = df$NPS_Type, 
                       Reservation = df$RESERVATION_DATE_R, CheckIn = df$CHECK_IN_DATE_C, CheckOut = df$CHECK_OUT_DATE_C, 
                       LengthStay = df$LENGTH_OF_STAY_C, RoomType = df$ROOM_TYPE_CODE_R, StateAbb = df$STATE_R, AgeRange = df$Age_Range_H, Gender = df$Gender_H,
                       GP_Tier = df$GP_Tier, POV = df$POV_CODE_C, Brand = df$Brand_PL, City = df$City_PL, 
@@ -30,7 +30,7 @@ project <- project[complete.cases(project), ]
 
 #Converting state abbrivations as factors
 project$StateAbb <- as.factor(project$StateAbb)
-
+project$RoomType <- as.factor(project$RoomType)
 #Redefining levels of GP_Tier, grouping duplicate levels
 levels(project$GP_Tier) <- c("None", "Card", "Courtesy", "Diamond", "Diamond", "Gold", "Gold", "Lifetime Diamond", "Lifetime Diamond", "Platinium", "Platinium")
 
