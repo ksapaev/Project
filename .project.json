@@ -91,6 +91,10 @@
         {
             "source": "Associative_Rules.R",
             "target": "Support.png"
+        },
+        {
+            "source": "Associative_Rules.R",
+            "target": "Confidence.png"
         }
     ]
 }
