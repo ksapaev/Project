@@ -23,6 +23,9 @@
         },
         {
             "name": "Graphs.R"
+        },
+        {
+            "name": "Probability.R"
         }
     ],
     "edges": [
