@@ -57,6 +57,10 @@
         {
             "source": "data.csv",
             "target": "LM_CheckIn.R"
+        },
+        {
+            "source": "data.csv",
+            "target": "LM_CheckOut.R"
         }
     ]
 }
