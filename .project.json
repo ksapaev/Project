@@ -41,10 +41,6 @@
         },
         {
             "source": "data.csv",
-            "target": "SVM.R"
-        },
-        {
-            "source": "data.csv",
             "target": "Associative_Rules.R"
         },
         {
