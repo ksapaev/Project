@@ -7,10 +7,50 @@
             "name": "data.csv"
         },
         {
-            "name": "clean.R"
+            "name": "clean.R",
+            "task_status": "completed",
+            "assigned_to": "ksapaev"
         },
         {
-            "name": "ProjectWork.R"
+            "name": "LM_CheckIn.R",
+            "task_status": "in progress",
+            "assigned_to": "ksapaev"
+        },
+        {
+            "name": "LM_CheckOut.R",
+            "task_status": "in progress",
+            "assigned_to": "ksapaev"
+        },
+        {
+            "name": "SVM.R",
+            "task_status": "not started",
+            "assigned_to": "ksapaev"
+        },
+        {
+            "name": "Associative_Rules.R",
+            "task_status": "not started",
+            "assigned_to": "ksapaev"
+        },
+        {
+            "name": "Visualization.R",
+            "task_status": "not started",
+            "assigned_to": "peaponte"
+        },
+        {
+            "name": "Probability.R",
+            "task_status": "not started",
+            "assigned_to": "peaponte"
+        },
+        {
+            "name": "Descriptive_Statistics.R",
+            "task_status": "not started",
+            "assigned_to": "peaponte"
+        },
+        {
+            "name": "Support.png"
+        },
+        {
+            "name": "Confidence.png"
         }
     ],
     "edges": [
@@ -24,7 +64,39 @@
         },
         {
             "source": "data.csv",
-            "target": "ProjectWork.R"
+            "target": "Descriptive_Statistics.R"
+        },
+        {
+            "source": "data.csv",
+            "target": "Probability.R"
+        },
+        {
+            "source": "data.csv",
+            "target": "Visualization.R"
+        },
+        {
+            "source": "data.csv",
+            "target": "LM_CheckIn.R"
+        },
+        {
+            "source": "data.csv",
+            "target": "LM_CheckOut.R"
+        },
+        {
+            "source": "data.csv",
+            "target": "Associative_Rules.R"
+        },
+        {
+            "source": "data.csv",
+            "target": "SVM.R"
+        },
+        {
+            "source": "Associative_Rules.R",
+            "target": "Support.png"
+        },
+        {
+            "source": "Associative_Rules.R",
+            "target": "Confidence.png"
         }
     ]
 }
