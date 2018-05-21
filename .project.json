@@ -30,7 +30,9 @@
             "name": "Probability.R"
         },
         {
-            "name": "Descriptive_Statistics.R"
+            "name": "Descriptive_Statistics.R",
+            "task_status": "not started",
+            "assigned_to": "peaponte"
         }
     ],
     "edges": [
