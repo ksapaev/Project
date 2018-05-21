@@ -41,10 +41,6 @@
         },
         {
             "source": "data.csv",
-            "target": "Visualization.R"
-        },
-        {
-            "source": "data.csv",
             "target": "Probability.R"
         }
     ]
