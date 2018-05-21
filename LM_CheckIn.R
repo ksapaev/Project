@@ -12,10 +12,10 @@ df <- read.csv('data.csv')
 View(df)
 str(df)
 
-LinModLTR <- lm(formula=LTR ~ Customer_Service + Hotel_Condition + Room_Satisfy + CheckIn + LengthStay, data=df)
+LinModLTR <- lm(formula=LTR ~ Customer_Service + Hotel_Condition + CheckIn, data=df)
 summary(LinModLTR)
 
-LinModSatisfaction <- lm(formula=Overall_Satisfaction ~ Customer_Service + Hotel_Condition + Room_Satisfy + CheckIn + LengthStay, data=df)
+LinModSatisfaction <- lm(formula=Overall_Satisfaction ~ Customer_Service + Hotel_Condition + CheckIn, data=df)
 summary(LinModSatisfaction)
 ## end your R code and logic 
 
