@@ -17,6 +17,9 @@
         },
         {
             "name": "SVM.R"
+        },
+        {
+            "name": "Associative_Rules.R"
         }
     ],
     "edges": [
