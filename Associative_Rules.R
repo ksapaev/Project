@@ -14,8 +14,9 @@ df <- read.csv('data.csv')
 
 ####################################
 ##### write output file ############
-# add your R code to write Support.png
+# add your R code to write Confidence.png
 ####################################
+
 
 
 
