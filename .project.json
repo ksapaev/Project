@@ -20,7 +20,9 @@
             "assigned_to": "ksapaev"
         },
         {
-            "name": "SVM.R"
+            "name": "SVM.R",
+            "task_status": "not started",
+            "assigned_to": "ksapaev"
         },
         {
             "name": "Associative_Rules.R",
