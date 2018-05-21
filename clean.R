@@ -10,14 +10,16 @@ raw <- read.csv('raw_data.csv')
 
 ## start writing your R code from here
 
-#Converting State abbrivations as Characters
+#Converting State abbrivations, room types, and cities as Characters
 raw$STATE_R <- as.character(raw$STATE_R)
 raw$ROOM_TYPE_CODE_R <- as.character(raw$ROOM_TYPE_CODE_R)
+raw$City_PL <- as.character(raw$City_PL)
+
 #Filtering by US states and saving the dataset as "df"
 df <- raw[raw$STATE_R %in% state.abb,]
 
 #Selecting necessary columns for the project under the dataset "project"
-project <- data.frame(LTR = df$Likelihood_Recommend_H, Hotel_Condition = df$Condition_Hotel_H, Staff_Cared = df$Staff_Cared_H,
+project <- data.frame(LTR = df$Likelihood_Recommend_H, Overall_Satisfaction = df$Overall_Sat_H, Hotel_Condition = df$Condition_Hotel_H, Staff_Cared = df$Staff_Cared_H,
                       Customer_Service = df$Customer_SVC_H, CheckIn = df$Check_In_H, Room_Satisfy = df$Guest_Room_H, NPS = df$NPS_Type, 
                       Reservation = df$RESERVATION_DATE_R, CheckInDate = df$CHECK_IN_DATE_C, CheckOutDate = df$CHECK_OUT_DATE_C, 
                       LengthStay = df$LENGTH_OF_STAY_C, RoomType = df$ROOM_TYPE_CODE_R, StateAbb = df$STATE_R, AgeRange = df$Age_Range_H, Gender = df$Gender_H,
@@ -28,18 +30,22 @@ project <- data.frame(LTR = df$Likelihood_Recommend_H, Hotel_Condition = df$Cond
 #Dropping all rows with NAs
 project <- project[complete.cases(project), ]
 
-#Converting state abbrivations as factors
+#Converting state abbrivations, room types, and cities as factors
 project$StateAbb <- as.factor(project$StateAbb)
 project$RoomType <- as.factor(project$RoomType)
+project$City <- as.factor(project$City)
+
 #Redefining levels of GP_Tier, grouping duplicate levels
-levels(project$GP_Tier) <- c("None", "Card", "Courtesy", "Diamond", "Diamond", "Gold", "Gold", "Lifetime Diamond", "Lifetime Diamond", "Platinium", "Platinium")
+levels(project$GP_Tier) <- c("None", "None", "Courtesy", "Diamond", "Diamond", "Gold", "Gold", "Lifetime Diamond", "Lifetime Diamond", "Platinium", "Platinium")
 
-
+#Removing unknown Age Group
+project <- project[project$AgeRange %in% levels(project$AgeRange)[-1],]
 
 #str(project)
+#str(project$GP_Tier)
 #head(project,20)
 #summary(project)
-#summary(project$RoomType, maxsum = length(levels(project$RoomType)))
+#summary(project$GP_Tier, maxsum = length(levels(project$GP_Tier)))
 
 
 
