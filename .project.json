@@ -15,7 +15,9 @@
             "assigned_to": "ksapaev"
         },
         {
-            "name": "LM_CheckOut.R"
+            "name": "LM_CheckOut.R",
+            "task_status": "not started",
+            "assigned_to": "ksapaev"
         },
         {
             "name": "SVM.R"
