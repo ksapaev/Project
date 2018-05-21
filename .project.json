@@ -22,7 +22,9 @@
             "name": "Associative_Rules.R"
         },
         {
-            "name": "Graphs.R"
+            "name": "Visualization.R",
+            "task_status": "not started",
+            "assigned_to": "not assigned"
         },
         {
             "name": "Probability.R"
@@ -55,7 +57,7 @@
         },
         {
             "source": "data.csv",
-            "target": "Graphs.R"
+            "target": "Visualization.R"
         },
         {
             "source": "data.csv",
