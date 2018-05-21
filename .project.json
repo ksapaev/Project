@@ -7,7 +7,9 @@
             "name": "data.csv"
         },
         {
-            "name": "clean.R"
+            "name": "clean.R",
+            "task_status": "not started",
+            "assigned_to": "ksapaev"
         },
         {
             "name": "LM_CheckIn.R",
