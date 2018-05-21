@@ -10,9 +10,6 @@
             "name": "clean.R"
         },
         {
-            "name": "ProjectWork.R"
-        },
-        {
             "name": "LM_CheckIn.R"
         },
         {
@@ -27,10 +24,6 @@
         {
             "source": "clean.R",
             "target": "data.csv"
-        },
-        {
-            "source": "data.csv",
-            "target": "ProjectWork.R"
         }
     ]
 }
