@@ -10,7 +10,27 @@
             "name": "clean.R"
         },
         {
-            "name": "ProjectWork.R"
+            "name": "LM_CheckIn.R"
+        },
+        {
+            "name": "LM_CheckOut.R"
+        },
+        {
+            "name": "SVM.R"
+        },
+        {
+            "name": "Associative_Rules.R"
+        },
+        {
+            "name": "Visualization.R",
+            "task_status": "not started",
+            "assigned_to": "not assigned"
+        },
+        {
+            "name": "Probability.R"
+        },
+        {
+            "name": "Descriptive_Statistics.R"
         }
     ],
     "edges": [
@@ -24,7 +44,31 @@
         },
         {
             "source": "data.csv",
-            "target": "ProjectWork.R"
+            "target": "Descriptive_Statistics.R"
+        },
+        {
+            "source": "data.csv",
+            "target": "Probability.R"
+        },
+        {
+            "source": "data.csv",
+            "target": "Visualization.R"
+        },
+        {
+            "source": "data.csv",
+            "target": "LM_CheckIn.R"
+        },
+        {
+            "source": "data.csv",
+            "target": "LM_CheckOut.R"
+        },
+        {
+            "source": "data.csv",
+            "target": "Associative_Rules.R"
+        },
+        {
+            "source": "data.csv",
+            "target": "SVM.R"
         }
     ]
 }
