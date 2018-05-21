@@ -10,7 +10,9 @@
             "name": "clean.R"
         },
         {
-            "name": "LM_CheckIn.R"
+            "name": "LM_CheckIn.R",
+            "task_status": "not started",
+            "assigned_to": "ksapaev"
         },
         {
             "name": "LM_CheckOut.R"
