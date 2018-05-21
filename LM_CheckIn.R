@@ -10,11 +10,13 @@ df <- read.csv('data.csv')
 
 ## start writing your R code from here
 View(df)
+str(df)
 
-LinMod <- lm(formula=LTR ~ Customer_Service + Hotel_Condition + Room_Satisfy + CheckIn + LengthStay, data=df)
-summary(LinMod)
+LinModLTR <- lm(formula=LTR ~ Customer_Service + Hotel_Condition + Room_Satisfy + CheckIn + LengthStay, data=df)
+summary(LinModLTR)
 
-
+LinModSatisfaction <- lm(formula=Overall_Satisfaction ~ Customer_Service + Hotel_Condition + Room_Satisfy + CheckIn + LengthStay, data=df)
+summary(LinModSatisfaction)
 ## end your R code and logic 
 
 ####################################
