@@ -23,7 +23,9 @@
             "name": "SVM.R"
         },
         {
-            "name": "Associative_Rules.R"
+            "name": "Associative_Rules.R",
+            "task_status": "not started",
+            "assigned_to": "ksapaev"
         },
         {
             "name": "Visualization.R",
