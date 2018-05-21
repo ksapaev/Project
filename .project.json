@@ -10,27 +10,39 @@
             "name": "clean.R"
         },
         {
-            "name": "LM_CheckIn.R"
+            "name": "LM_CheckIn.R",
+            "task_status": "not started",
+            "assigned_to": "ksapaev"
         },
         {
-            "name": "LM_CheckOut.R"
+            "name": "LM_CheckOut.R",
+            "task_status": "not started",
+            "assigned_to": "ksapaev"
         },
         {
-            "name": "SVM.R"
+            "name": "SVM.R",
+            "task_status": "not started",
+            "assigned_to": "ksapaev"
         },
         {
-            "name": "Associative_Rules.R"
+            "name": "Associative_Rules.R",
+            "task_status": "not started",
+            "assigned_to": "ksapaev"
         },
         {
             "name": "Visualization.R",
             "task_status": "not started",
-            "assigned_to": "not assigned"
+            "assigned_to": "peaponte"
         },
         {
-            "name": "Probability.R"
+            "name": "Probability.R",
+            "task_status": "not started",
+            "assigned_to": "peaponte"
         },
         {
-            "name": "Descriptive_Statistics.R"
+            "name": "Descriptive_Statistics.R",
+            "task_status": "not started",
+            "assigned_to": "peaponte"
         }
     ],
     "edges": [
