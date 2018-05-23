@@ -5,25 +5,14 @@ setwd(Sys.getenv('PROJECT_HOME'))
 
 ####################################
 ## write code to read input csv into data frame
-df <- read.csv('data.csv')
+project <- read.csv('data.csv')
 ####################################
 
 ## start writing your R code from here
-#Descriptive Stats
 
-#Find mean 
+library(ggplot2)
 
-
-
-#Find median
-
-#Find mode
-
-#Create histogram
-
-#hist(df$Col, breaks=20)
-
-
+ggplot(project, aes(x=LTR, y=AgeRange, color=GP_Tier)) + geom_point()
 ## end your R code and logic 
 
 ####################################
