@@ -9,6 +9,20 @@ df <- read.csv('data.csv')
 ####################################
 
 ## start writing your R code from here
+#Descriptive Stats
+
+#Find mean 
+
+
+
+#Find median
+
+#Find mode
+
+#Create histogram
+
+#hist(df$Col, breaks=20)
+
 
 ## end your R code and logic 
 
