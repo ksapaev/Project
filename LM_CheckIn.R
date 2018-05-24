@@ -47,8 +47,8 @@ summary(LinModSatisfaction)
 LinModSatisfaction <- lm(formula=Overall_Satisfaction ~ Customer_Service + Hotel_Condition + CheckIn, data=df)
 summary(LinModSatisfaction)
 
-View(df)
-str(df)
+
+
 ## end your R code and logic 
 
 ####################################
