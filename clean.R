@@ -44,6 +44,9 @@ project <- project[project$AgeRange %in% levels(project$AgeRange)[-1],]
 #Adding regions column to the dataset according to the states
 project$StateRegion <- state.region[match(project$StateAbb, state.abb)]
 
+#Counting row names from beginning
+rownames(project) <- NULL
+
 #str(project)
 #str(project$GP_Tier)
 #head(project,20)
