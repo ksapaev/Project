@@ -48,7 +48,7 @@ summary(LinModSatisfaction)
 
 
 #Create dataframe of just the 10th row
-test <- df[100:110,]
+test <- df[100:109,]
 
 
 #Test/predict the dataframe with 10th element. Result is Not Detractor for both.
