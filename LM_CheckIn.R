@@ -73,6 +73,3 @@ LTR2test
 # add your R code to write output file
 ####################################
 
-getwd()
-
-setwd("C:/Users/Khushnud/stigmergy/Project")
