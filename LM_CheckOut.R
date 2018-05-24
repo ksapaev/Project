@@ -10,6 +10,7 @@ df <- read.csv('data.csv')
 
 ## start writing your R code from here
 
+
 LinModLTR <- lm(formula=LTR ~ Staff_Cared, data=df)
 summary(LinModLTR)
 
@@ -33,9 +34,9 @@ summary(LinModSatisfaction)
 
 
 
+
 #Create dataframe of just the 10th row
 test <- df[100:110,]
-
 
 #Test/predict the dataframe with 10th element. Result is Not Detractor for both.
 LTR1test <- predict(LinModLTR, test, type="response")
