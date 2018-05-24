@@ -49,6 +49,23 @@ summary(LinModSatisfaction)
 
 
 
+
+#Create dataframe of just the 10th row
+test <- df[100:110,]
+
+
+#Test/predict the dataframe with 10th element. Result is Not Detractor for both.
+LTR1test <- predict(LinModLTR, test, type="response")
+ifelse(LTR1test<7, "Detractor", "Not Detractor")
+
+LTR2test <- predict(LinModSatisfaction, test, type="response")
+ifelse(LTR2test<7, "Detractor", "Not Detractor")
+
+test$LTR
+LTR1test
+LTR2test
+
+
 ## end your R code and logic 
 
 ####################################
