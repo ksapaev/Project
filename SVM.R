@@ -54,6 +54,11 @@ str(svmPredict)
 
 
 
+#Checking 1000th survey for the SVM model
+compTable_1000 <- data.frame(testData[1000,9], svmPredict[1,1000])
+table(compTable_1000)
+
+
 ## end your R code and logic 
 
 ####################################
