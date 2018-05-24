@@ -59,6 +59,24 @@ compTable_1000 <- data.frame(testData[1000,9], svmPredict[1,1000])
 table(compTable_1000)
 
 
+
+
+#Sampling 1000 surveys and calculating the percentage of prediction of the model
+D <- sample(1:dim(testData)[1], 1000, replace=FALSE)
+testModel <- function (D) {
+  compTable_D <- data.frame(testData[D,9], svmPredict[1,D])
+  table(compTable_D)
+}
+
+ModelPercentage <- (1-(testModel(D)[1,1] + testModel(D)[2,2])/sum(testModel()))*100
+ModelPercentage
+
+
+
+
+
+
+
 ## end your R code and logic 
 
 ####################################
