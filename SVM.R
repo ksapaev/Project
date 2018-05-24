@@ -46,11 +46,12 @@ svmOut <- ksvm(NPS ~ ., data=trainData, kernel="rbfdot", kpar="automatic", C=5, 
 svmPredict <- predict(svmOut, testData, type="votes")
 
 #Creating a dataframe for prediction
-compTable <- data.frame(testData[,9], svmPredict[1,])
+compTable <- data.frame(testData[,which( colnames(testData)=="NPS" )], svmPredict[1,])
 str(svmPredict)
 #Showing predicted results in table
 table(compTable)
 str(svmPredict)
+
 
 
 
