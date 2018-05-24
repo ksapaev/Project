@@ -9,8 +9,7 @@ df <- read.csv('data.csv')
 ####################################
 
 ## start writing your R code from here
-View(df)
-str(df)
+
 
 LinModLTR <- lm(formula=LTR ~ CheckIn, data=df)
 summary(LinModLTR)
@@ -26,8 +25,6 @@ summary(LinModLTR)
 
 LinModLTR <- lm(formula=LTR ~ Customer_Service + Hotel_Condition + CheckIn, data=df)
 summary(LinModLTR)
-
-
 
 
 
