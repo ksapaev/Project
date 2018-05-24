@@ -13,17 +13,17 @@
         },
         {
             "name": "LM_CheckIn.R",
-            "task_status": "validating",
+            "task_status": "in progress",
             "assigned_to": "ksapaev"
         },
         {
             "name": "LM_CheckOut.R",
-            "task_status": "validating",
+            "task_status": "in progress",
             "assigned_to": "ksapaev"
         },
         {
             "name": "SVM.R",
-            "task_status": "in progress",
+            "task_status": "not started",
             "assigned_to": "ksapaev"
         },
         {
@@ -51,6 +51,9 @@
         },
         {
             "name": "Confidence.png"
+        },
+        {
+            "name": "ProjectWork.R"
         }
     ],
     "edges": [
