@@ -46,7 +46,7 @@ svmOut <- ksvm(NPS ~ ., data=trainData, kernel="rbfdot", kpar="automatic", C=5, 
 svmPredict <- predict(svmOut, testData, type="votes")
 
 #Creating a dataframe for prediction
-compTable <- data.frame(testData[,which( colnames(testData)=="NPS" )], svmPredict[1,])
+compTable <- data.frame(testData[,which(colnames(testData)=="NPS" )], svmPredict[1,])
 str(svmPredict)
 #Showing predicted results in table
 table(compTable)
@@ -56,7 +56,7 @@ str(svmPredict)
 
 
 #Checking 1000th survey for the SVM model
-compTable_1000 <- data.frame(testData[1000,9], svmPredict[1,1000])
+compTable_1000 <- data.frame(testData[1000,which(colnames(testData)=="NPS" )], svmPredict[1,1000])
 table(compTable_1000)
 
 
@@ -65,7 +65,7 @@ table(compTable_1000)
 #Sampling 1000 surveys and calculating the percentage of prediction of the model
 D <- sample(1:dim(testData)[1], 1000, replace=FALSE)
 testModel <- function (D) {
-  compTable_D <- data.frame(testData[D,9], svmPredict[1,D])
+  compTable_D <- data.frame(testData[D,which(colnames(testData)=="NPS" )], svmPredict[1,D])
   table(compTable_D)
 }
 
