@@ -17,7 +17,10 @@ summary(LinModLTR)
 LinModLTR <- lm(formula=LTR ~ Room_Satisfy, data=df)
 summary(LinModLTR)
 
-LinModLTR <- lm(formula=LTR ~ Customer_Service + Hotel_Condition + Staff_Cared + Room_Satisfy + LengthStay, data=df)
+LinModLTR <- lm(formula=LTR ~ Customer_Service, data=df)
+summary(LinModLTR)
+
+LinModLTR <- lm(formula=LTR ~ Customer_Service + Staff_Cared + Room_Satisfy + LengthStay, data=df)
 summary(LinModLTR)
 
 
@@ -29,7 +32,10 @@ summary(LinModSatisfaction)
 LinModSatisfaction <- lm(formula=Overall_Satisfaction ~ Room_Satisfy, data=df)
 summary(LinModSatisfaction)
 
-LinModSatisfaction <- lm(formula=Overall_Satisfaction ~ Customer_Service + Hotel_Condition + Staff_Cared + Room_Satisfy + LengthStay, data=df)
+LinModSatisfaction <- lm(formula=Overall_Satisfaction ~ Customer_Service, data=df)
+summary(LinModSatisfaction)
+
+LinModSatisfaction <- lm(formula=Overall_Satisfaction ~ Customer_Service + Staff_Cared + Room_Satisfy + LengthStay, data=df)
 summary(LinModSatisfaction)
 
 
