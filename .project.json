@@ -126,6 +126,10 @@
         {
             "source": "Associative_Rules.R",
             "target": "Top100Confidence.png"
+        },
+        {
+            "source": "Associative_Rules.R",
+            "target": "DetractorSupport10.png"
         }
     ]
 }
