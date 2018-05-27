@@ -203,6 +203,10 @@
         {
             "source": "LM_CheckIn.R",
             "target": "LTR_CheckIn.png"
+        },
+        {
+            "source": "LM_CheckIn.R",
+            "target": "LTR_HC.png"
         }
     ]
 }
