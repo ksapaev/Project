@@ -62,6 +62,15 @@ plot(head(top.confidence, 100))
 dev.off()
 
 
+#Show all rules
+png(filename="Support.png")
+plot(head(top.support, 10))
+dev.off()
+
+png(filename="Confidence.png")
+plot(head(top.confidence, 10))
+dev.off()
+
 
 
 
