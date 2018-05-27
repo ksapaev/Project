@@ -57,6 +57,9 @@
         },
         {
             "name": "Top100Support.png"
+        },
+        {
+            "name": "Top100Confidence.png"
         }
     ],
     "edges": [
