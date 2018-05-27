@@ -54,6 +54,65 @@
         },
         {
             "name": "ProjectWork.R"
+        },
+        {
+            "name": "Top10Support.png"
+        },
+        {
+            "name": "Top10Confidence.png"
+        },
+        {
+            "name": "Top100Support.png"
+        },
+        {
+            "name": "Top100Confidence.png"
+        },
+        {
+            "name": "Frequency.png"
+        },
+        {
+            "name": "Histogram.png"
+        },
+        {
+            "name": "NPS.R",
+            "task_status": "not started",
+            "assigned_to": "not assigned"
+        },
+        {
+            "name": "DetSupport.png"
+        },
+        {
+            "name": "DetConfidence.png"
+        },
+        {
+            "name": "ProSupport.png"
+        },
+        {
+            "name": "ProConfidence.png"
+        },
+        {
+            "name": "GoodRulesDetractor.png"
+        },
+        {
+            "name": "GoodRulesPromoter.png"
+        },
+        {
+            "name": "LTR_CheckIn.png"
+        },
+        {
+            "name": "LTR_HC.png"
+        },
+        {
+            "name": "LTR_StaffCared.png"
+        },
+        {
+            "name": "LTR_RoomSatisfied.png"
+        },
+        {
+            "name": "LTR_CustomerService.png"
+        },
+        {
+            "name": "LTR_CheckIn_HC.png"
         }
     ],
     "edges": [
@@ -100,6 +159,82 @@
         {
             "source": "Associative_Rules.R",
             "target": "Confidence.png"
+        },
+        {
+            "source": "Associative_Rules.R",
+            "target": "Top10Support.png"
+        },
+        {
+            "source": "Associative_Rules.R",
+            "target": "Top10Confidence.png"
+        },
+        {
+            "source": "Associative_Rules.R",
+            "target": "Top100Support.png"
+        },
+        {
+            "source": "Associative_Rules.R",
+            "target": "Top100Confidence.png"
+        },
+        {
+            "source": "Associative_Rules.R",
+            "target": "Frequency.png"
+        },
+        {
+            "source": "SVM.R",
+            "target": "Histogram.png"
+        },
+        {
+            "source": "data.csv",
+            "target": "NPS.R"
+        },
+        {
+            "source": "Associative_Rules.R",
+            "target": "DetSupport.png"
+        },
+        {
+            "source": "Associative_Rules.R",
+            "target": "DetConfidence.png"
+        },
+        {
+            "source": "Associative_Rules.R",
+            "target": "ProSupport.png"
+        },
+        {
+            "source": "Associative_Rules.R",
+            "target": "ProConfidence.png"
+        },
+        {
+            "source": "Associative_Rules.R",
+            "target": "GoodRulesDetractor.png"
+        },
+        {
+            "source": "Associative_Rules.R",
+            "target": "GoodRulesPromoter.png"
+        },
+        {
+            "source": "LM_CheckIn.R",
+            "target": "LTR_CheckIn.png"
+        },
+        {
+            "source": "LM_CheckIn.R",
+            "target": "LTR_HC.png"
+        },
+        {
+            "source": "LM_CheckOut.R",
+            "target": "LTR_StaffCared.png"
+        },
+        {
+            "source": "LM_CheckOut.R",
+            "target": "LTR_RoomSatisfied.png"
+        },
+        {
+            "source": "LM_CheckOut.R",
+            "target": "LTR_CustomerService.png"
+        },
+        {
+            "source": "LM_CheckIn.R",
+            "target": "LTR_CheckIn_HC.png"
         }
     ]
 }
