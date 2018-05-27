@@ -24,44 +24,7 @@ NewDF <- data.frame(LengthOfStay=df$LengthStay, Gender=df$Gender, AgeRange=df$Ag
 NewDF$LengthOfStay <- factor(NewDF[ ,1])
 
 
-
-#Viewing the Rules
-rules <- apriori(NewDF, parameter = list(support=0.01,confidence=0.5))
-summary(rules)
-
-#Sorting rules by support and confidence    
-top.support <- sort(rules, decreasing = TRUE, na.last = NA, by = "support")
-top.confidence <- sort(rules, decreasing = TRUE, na.last = NA, by = "confidence")
-
-
-#Show the top 10 rules
-inspect(head(top.support, 10))
-inspect(head(top.confidence, 10))
-
-png(filename="Top10Support.png", width=800, height=600)
-plot(head(top.support, 10))
-dev.off()
-
-png(filename="Top10Confidence.png", width=800, height=600)
-plot(head(top.confidence, 10))
-dev.off()
-
-
-#Show the top 100 rules
-inspect(head(top.support, 100))
-inspect(head(top.confidence, 100))
-
-png(filename="Top100Support.png", width=800, height=600)
-plot(head(top.support, 100))
-dev.off()
-
-png(filename="Top100Confidence.png", width=800, height=600)
-plot(head(top.confidence, 100))
-dev.off()
-
-
-##########################################
-##LEFT HAND SIDE as NPS types (Detractor, Passive, or Promoter)
+##RIGHT HAND SIDE as NPS types (Detractor, Passive, or Promoter)
 
 #Creating a transaction from the dataset
 trans <- as(NewDF, "transactions")
@@ -76,8 +39,8 @@ dev.off()
 
 
 #Creating rules with LHS as NPS types
-NPSrules <- apriori(trans, parameter = list(support = 0.01, confidence = 0.5,target="rules"), 
-                    appearance = list(lhs = c("NPS=Detractor", "NPS=Passive", "NPS=Promoter"), default="rhs"))
+NPSrules <- apriori(trans, parameter = list(support = 0.01, confidence = 0.1, minlen = 2, target="rules"), 
+                    appearance = list(rhs = "NPS=Detractor", default="lhs"))
 
 summary(NPSrules)
 
