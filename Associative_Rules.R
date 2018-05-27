@@ -38,11 +38,11 @@ top.confidence <- sort(rules, decreasing = TRUE, na.last = NA, by = "confidence"
 inspect(head(top.support, 10))
 inspect(head(top.confidence, 10))
 
-png(filename="Top10Support.png")
+png(filename="Top10Support.png", width=800, height=600)
 plot(head(top.support, 10))
 dev.off()
 
-png(filename="Top10Confidence.png")
+png(filename="Top10Confidence.png", width=800, height=600)
 plot(head(top.confidence, 10))
 dev.off()
 
@@ -51,11 +51,11 @@ dev.off()
 inspect(head(top.support, 100))
 inspect(head(top.confidence, 100))
 
-png(filename="Top100Support.png")
+png(filename="Top100Support.png", width=800, height=600)
 plot(head(top.support, 100))
 dev.off()
 
-png(filename="Top100Confidence.png")
+png(filename="Top100Confidence.png", width=800, height=600)
 plot(head(top.confidence, 100))
 dev.off()
 
@@ -90,11 +90,11 @@ top.confidence.nps <- sort(NPSrules, decreasing = TRUE, na.last = NA, by = "conf
 inspect(top.support.nps)
 inspect(top.confidence.nps)
 
-png(filename="Support.png")
+png(filename="Support.png", width=800, height=600)
 plot(top.support.nps)
 dev.off()
 
-png(filename="Confidence.png")
+png(filename="Confidence.png", width=800, height=600)
 plot(top.confidence.nps)
 dev.off()
 
