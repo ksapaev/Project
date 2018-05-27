@@ -210,6 +210,10 @@
         {
             "source": "LM_CheckIn.R",
             "target": "LTR_HC.png"
+        },
+        {
+            "source": "LM_CheckOut.R",
+            "target": "LTR_StaffCared.png"
         }
     ]
 }
