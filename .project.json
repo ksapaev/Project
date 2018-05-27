@@ -60,9 +60,6 @@
         },
         {
             "name": "Top100Confidence.png"
-        },
-        {
-            "name": "DetractorSupport10.png"
         }
     ],
     "edges": [
@@ -117,10 +114,6 @@
         {
             "source": "Associative_Rules.R",
             "target": "Top100Confidence.png"
-        },
-        {
-            "source": "Associative_Rules.R",
-            "target": "DetractorSupport10.png"
         }
     ]
 }
