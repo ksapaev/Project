@@ -28,6 +28,23 @@ NPS <- function(LTR) {
 NPS(LTR)
 
 
+
+
+
+#Comparing NPS for the Purpose of Visit
+
+LTR1 <- df$LTR[df$POV=="BUSINESS"]
+LTR2 <- df$LTR[df$POV=="LEISURE"]
+
+NPS(LTR1)
+NPS(LTR2)
+
+#Calculating the difference
+NPS(LTR1) - NPS(LTR2)
+
+
+
+
 ## end your R code and logic 
 
 ####################################
