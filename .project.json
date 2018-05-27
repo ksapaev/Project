@@ -54,6 +54,18 @@
         },
         {
             "name": "ProjectWork.R"
+        },
+        {
+            "name": "Top10Support.png"
+        },
+        {
+            "name": "Top10Confidence.png"
+        },
+        {
+            "name": "Top100Support.png"
+        },
+        {
+            "name": "Top100Confidence.png"
         }
     ],
     "edges": [
@@ -100,6 +112,22 @@
         {
             "source": "Associative_Rules.R",
             "target": "Confidence.png"
+        },
+        {
+            "source": "Associative_Rules.R",
+            "target": "Top10Support.png"
+        },
+        {
+            "source": "Associative_Rules.R",
+            "target": "Top10Confidence.png"
+        },
+        {
+            "source": "Associative_Rules.R",
+            "target": "Top100Support.png"
+        },
+        {
+            "source": "Associative_Rules.R",
+            "target": "Top100Confidence.png"
         }
     ]
 }
