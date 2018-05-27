@@ -64,11 +64,11 @@ dev.off()
 
 #Show all rules
 png(filename="Support.png")
-plot(head(top.support))
+plot(top.support)
 dev.off()
 
 png(filename="Confidence.png")
-plot(head(top.confidence))
+plot(top.confidence)
 dev.off()
 
 
