@@ -59,7 +59,7 @@
             "name": "ProSupport.png"
         },
         {
-            "name": "Top10Confidence.png"
+            "name": "ProConfidence.png"
         },
         {
             "name": "Top100Support.png"
@@ -130,7 +130,7 @@
         },
         {
             "source": "Associative_Rules.R",
-            "target": "Top10Confidence.png"
+            "target": "ProConfidence.png"
         },
         {
             "source": "Associative_Rules.R",
