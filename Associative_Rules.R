@@ -62,16 +62,36 @@ plot(head(top.confidence, 100))
 dev.off()
 
 
-#Show all rules
+##########################################
+##LEFT HAND SIDE as NPS types (Detractor, Passive, or Promoter)
+
+#Creating a transaction from the dataset
+trans <- as(NewDF, "transactions")
+summary(trans)
+itemLabels(trans)
+
+#Creating rules with LHS as NPS types
+NPSrules <- apriori(trans, parameter = list(support = 0.01, confidence = 0.5,target="rules"), 
+                    appearance = list(lhs = c("NPS=Detractor", "NPS=Passive", "NPS=Promoter"), default="rhs"))
+
+summary(NPSrules)
+
+#Sorting rules by support and confidence    
+top.support.nps <- sort(NPSrules, decreasing = TRUE, na.last = NA, by = "support")
+top.confidence.nps <- sort(NPSrules, decreasing = TRUE, na.last = NA, by = "confidence")
+
+
+#Show the rules
+inspect(top.support.nps)
+inspect(top.confidence.nps)
+
 png(filename="Support.png")
-plot(top.support)
+plot(top.support.nps)
 dev.off()
 
 png(filename="Confidence.png")
-plot(top.confidence)
+plot(top.confidence.nps)
 dev.off()
-
-
 
 
 ## end your R code and logic 
