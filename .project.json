@@ -72,6 +72,11 @@
         },
         {
             "name": "Histogram.png"
+        },
+        {
+            "name": "NPS.R",
+            "task_status": "not started",
+            "assigned_to": "not assigned"
         }
     ],
     "edges": [
@@ -142,6 +147,10 @@
         {
             "source": "SVM.R",
             "target": "Histogram.png"
+        },
+        {
+            "source": "data.csv",
+            "target": "NPS.R"
         }
     ]
 }
