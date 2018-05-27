@@ -110,6 +110,9 @@
         },
         {
             "name": "LTR_CustomerService.png"
+        },
+        {
+            "name": "LTR_CheckIn_HC.png"
         }
     ],
     "edges": [
@@ -228,6 +231,10 @@
         {
             "source": "LM_CheckOut.R",
             "target": "LTR_CustomerService.png"
+        },
+        {
+            "source": "LM_CheckIn.R",
+            "target": "LTR_CheckIn_HC.png"
         }
     ]
 }
