@@ -104,6 +104,9 @@
         },
         {
             "name": "LTR_StaffCared.png"
+        },
+        {
+            "name": "LTR_RoomSatisfied.png"
         }
     ],
     "edges": [
