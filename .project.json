@@ -95,6 +95,12 @@
         },
         {
             "name": "GoodRulesPromoter.png"
+        },
+        {
+            "name": "LTR_CheckIn.png"
+        },
+        {
+            "name": "LTR_HC.png"
         }
     ],
     "edges": [
@@ -193,6 +199,14 @@
         {
             "source": "Associative_Rules.R",
             "target": "GoodRulesPromoter.png"
+        },
+        {
+            "source": "LM_CheckIn.R",
+            "target": "LTR_CheckIn.png"
+        },
+        {
+            "source": "LM_CheckIn.R",
+            "target": "LTR_HC.png"
         }
     ]
 }
