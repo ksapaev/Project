@@ -100,6 +100,7 @@ LTR2test
 
 ####################################
 ##### write output file ############
-# add your R code to write output file
+# add your R code to write LTR_CheckIn.png
 ####################################
+
 
