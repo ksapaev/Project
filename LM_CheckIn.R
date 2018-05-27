@@ -54,62 +54,17 @@ dev.off()
 
 #############
 
-#Linear model for Overall Satisfaction
-
-#OverallSatisfaction - CheckIn
-LinModSatisfaction <- lm(formula=Overall_Satisfaction ~ CheckIn, data=df)
-summary(LinModSatisfaction)
-
-plot <- ggplot(df, aes(x=CheckIn, y=Overall_Satisfaction)) +geom_count()+ stat_smooth(method = "lm", formula = y ~ x, se = FALSE, col = "red") 
-plot <- plot + labs(x = "Check In", y = "Overall Satisfaction")
-plot <- plot  + coord_fixed() + theme_minimal() + scale_x_continuous( breaks = 1:10)+ scale_y_continuous( breaks = 1:10)
-
-png(filename="Satisfaction_CheckIn.png", width=800, height=600)
-plot
-dev.off()
-
-#OverallSatisfaction - HotelCondition
-LinModSatisfaction <- lm(formula=Overall_Satisfaction ~ Hotel_Condition, data=df)
-summary(LinModSatisfaction)
-
-plot <- ggplot(df, aes(x=Hotel_Condition, y=Overall_Satisfaction)) +geom_count()+ stat_smooth(method = "lm", formula = y ~ x, se = FALSE, col = "red") 
-plot <- plot + labs(x = "Hotel Condition", y = "Overall Satisfaction")
-plot <- plot  + coord_fixed() + theme_minimal() + scale_x_continuous( breaks = 1:10)+ scale_y_continuous( breaks = 1:10)
-
-png(filename="Satisfaction_HC.png", width=800, height=600)
-plot
-dev.off()
-
-
-#OverallSatisfaction - CheckIn + HotelCondition
-LinModSatisfaction <- lm(formula=Overall_Satisfaction ~ Hotel_Condition + CheckIn, data=df)
-summary(LinModSatisfaction)
-
-plot <- ggplot(df, aes(x=Hotel_Condition+CheckIn, y=Overall_Satisfaction)) +geom_count()+ stat_smooth(method = "lm", formula = y ~ x, se = FALSE, col = "red") 
-plot <- plot + labs(x = "Hotel Condition and Check In", y = "Overall Satisfaction")
-plot <- plot + theme_minimal() + scale_y_continuous( breaks = 1:10)
-
-png(filename="Satisfaction_CheckIn_HC.png", width=800, height=600)
-plot
-dev.off()
-
-
-
-
 #Create dataframe of sample 10 elements
 test <- df[sample(df$LTR, 10, replace=FALSE),]
 
 
-#Test/predict the dataframe with 10th element. Result is Not Detractor for both.
-LTR1test <- predict(LinModLTR, test, type="response")
-ifelse(LTR1test<7, "Detractor", "Not Detractor")
-
-LTR2test <- predict(LinModSatisfaction, test, type="response")
-ifelse(LTR2test<7, "Detractor", "Not Detractor")
+#Test/predict the dataframe with 10 elements. Result is Not Detractor for both.
+LTRtest <- predict(LinModLTR, test, type="response")
+ifelse(LTRtest<7, "Detractor", "Not Detractor")
 
 test$LTR
-LTR1test
-LTR2test
+LTRtest
+
 
 
 ## end your R code and logic 
