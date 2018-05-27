@@ -10,6 +10,10 @@ df <- read.csv('data.csv')
 
 ## start writing your R code from here
 
+library(ggplot2)
+library(arules)
+library(arulesViz)
+library(kernlab)
 
 #Create Dataframe with appropriate columns
 NewDF <- data.frame(LengthOfStay=df$LengthStay, Gender=df$Gender, AgeRange=df$AgeRange, GPTier=df$GP_Tier, PurposeOfVisit = df$POV,
@@ -43,13 +47,26 @@ png(filename="Top10Confidence.png")
 plot(head(top.confidence, 10))
 dev.off()
 
-########################
-#Part E:2
+
+#Show the top 100 rules
+inspect(head(top.support, 100))
+inspect(head(top.confidence, 100))
+
+png(filename="Top100Support.png")
+plot(head(top.support, 100))
+dev.off()
+
+png(filename="Top100Confidence.png")
+plot(head(top.confidence, 100))
+dev.off()
+
+
+
 #Generate rules that predict if someone will be a detractor
 
 #Add LTR Column to detect detractor
 #Converting as character
-df$NPS_Type <- as.character(df$NPS_Type)
+df$NPS <- as.character(df$NPS_Type)
 #Defining Promoters and passives as Not Detractors
 df$NPS_Type[df$NPS_Type != "Detractor"] <- "NotDetractor"
 #Formatting column as factor
