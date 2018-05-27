@@ -66,6 +66,9 @@
         },
         {
             "name": "Top100Confidence.png"
+        },
+        {
+            "name": "Frequency.png"
         }
     ],
     "edges": [
