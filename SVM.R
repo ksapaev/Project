@@ -40,7 +40,12 @@ str(testData)
 length(testData$NPS)
 
 #Running SVM on train data
-svmOut <- ksvm(NPS ~ ., data=trainData, kernel="rbfdot", kpar="automatic", C=5, prob.model=TRUE)
+svmOut <- ksvm(NPS ~ ., data=trainData, kernel="rbfdot", kpar="automatic", C=5, cross=3, prob.model=TRUE)
+
+#Histogram of support vectors
+png(filename="Histogram.png", width=800, height=600)
+hist(alpha(svmOut)[[1]], main="Support vector histogram with C=5", xlab="Support vector values")
+dev.off()
 
 #Predicting SVM for test data
 svmPredict <- predict(svmOut, testData, type="votes")
@@ -50,8 +55,6 @@ compTable <- data.frame(testData[,which(colnames(testData)=="NPS" )], svmPredict
 str(svmPredict)
 #Showing predicted results in table
 table(compTable)
-str(svmPredict)
-
 
 
 
@@ -60,10 +63,9 @@ compTable_1000 <- data.frame(testData[1000,which(colnames(testData)=="NPS" )], s
 table(compTable_1000)
 
 
-
-
 #Sampling 1000 surveys and calculating the percentage of prediction of the model
 D <- sample(1:dim(testData)[1], 1000, replace=FALSE)
+
 testModel <- function (D) {
   compTable_D <- data.frame(testData[D,which(colnames(testData)=="NPS" )], svmPredict[1,D])
   table(compTable_D)
