@@ -61,6 +61,14 @@ summary(LinModLTR)
 LinModLTR <- lm(formula=LTR ~ Customer_Service + Staff_Cared + Room_Satisfy, data=df)
 summary(LinModLTR)
 
+plot <- ggplot(df, aes(x=Customer_Service + Staff_Cared + Room_Satisfy, y=LTR)) +geom_count()+ stat_smooth(method = "lm", formula = y ~ x, se = FALSE, col = "red") 
+plot <- plot + labs(x = "Customer Service, Staff Cared, and Room Satisfied", y = "Likelihood to Recommend")
+plot <- plot  + theme_minimal() + scale_y_continuous( breaks = 1:10)
+
+png(filename="LTR_All.png", width=800, height=600)
+plot
+dev.off()
+
 #############
 
 
@@ -80,8 +88,9 @@ LTRtest
 
 ####################################
 ##### write output file ############
-# add your R code to write LTR_CustomerService.png
+# add your R code to write LTR_All.png
 ####################################
+
 
 
 
