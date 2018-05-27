@@ -59,9 +59,6 @@
             "name": "Top10Support.png"
         },
         {
-            "name": "Top10Confidence.png"
-        },
-        {
             "name": "Frequency.png"
         },
         {
@@ -139,10 +136,6 @@
         {
             "source": "Associative_Rules.R",
             "target": "Top10Support.png"
-        },
-        {
-            "source": "Associative_Rules.R",
-            "target": "Top10Confidence.png"
         },
         {
             "source": "Associative_Rules.R",
