@@ -70,7 +70,7 @@ itemLabels(trans)
 
 
 #Frequency of support parameter
-png(filename="Frequency.png")
+png(filename="Frequency.png", width=800, height=600)
 itemFrequencyPlot(trans, support=0.05, cex.names=0.6)
 dev.off()
 
