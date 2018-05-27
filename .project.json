@@ -50,7 +50,7 @@
             "name": "DetSupport.png"
         },
         {
-            "name": "Confidence.png"
+            "name": "DetConfidence.png"
         },
         {
             "name": "ProjectWork.R"
@@ -122,7 +122,7 @@
         },
         {
             "source": "Associative_Rules.R",
-            "target": "Confidence.png"
+            "target": "DetConfidence.png"
         },
         {
             "source": "Associative_Rules.R",
