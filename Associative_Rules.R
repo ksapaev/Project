@@ -20,8 +20,6 @@ NewDF <- data.frame(LengthOfStay=df$LengthStay, Gender=df$Gender, AgeRange=df$Ag
                     State = df$StateAbb, Location = df$Location, NPS = df$NPS)
 
 
-str(NewDF)
-
 #Convert column 'Length of stay' into a factor
 NewDF$LengthOfStay <- factor(NewDF[ ,1])
 
@@ -69,6 +67,13 @@ dev.off()
 trans <- as(NewDF, "transactions")
 summary(trans)
 itemLabels(trans)
+
+
+#Frequency of support parameter
+png(filename="Frequency.png")
+itemFrequencyPlot(trans, support=0.05, cex.names=0.6)
+dev.off()
+
 
 #Creating rules with LHS as NPS types
 NPSrules <- apriori(trans, parameter = list(support = 0.01, confidence = 0.5,target="rules"), 
