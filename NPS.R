@@ -13,7 +13,7 @@ df <- read.csv('data.csv')
 
 
 #Function to generate NPS
-#Defining a vector equal to the 'Likelihood Recommend' column
+#Defining a vector equal to the 'Likelihood to Recommend' column
 LTR <- df$LTR
 
 #Creating a function of NPS that returns a number
