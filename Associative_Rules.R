@@ -105,8 +105,9 @@ dev.off()
 
 ####################################
 ##### write output file ############
-# add your R code to write DetractorSupport10.png
+# add your R code to write DetractorConfidence10.png
 ####################################
+
 
 
 
