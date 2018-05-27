@@ -58,7 +58,7 @@ dev.off()
 test <- df[sample(df$LTR, 10, replace=FALSE),]
 
 
-#Test/predict the dataframe with 10 elements. Result is Not Detractor for both.
+#Test/predict the dataframe with 10 elements
 LTRtest <- predict(LinModLTR, test, type="response")
 ifelse(LTRtest<7, "Detractor", "Not Detractor")
 
