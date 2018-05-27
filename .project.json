@@ -138,6 +138,10 @@
         {
             "source": "Associative_Rules.R",
             "target": "Frequency.png"
+        },
+        {
+            "source": "SVM.R",
+            "target": "Histogram.png"
         }
     ]
 }
