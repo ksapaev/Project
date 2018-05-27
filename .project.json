@@ -47,7 +47,7 @@
             "assigned_to": "peaponte"
         },
         {
-            "name": "Support.png"
+            "name": "Top10Support.png"
         },
         {
             "name": "Confidence.png"
@@ -95,7 +95,7 @@
         },
         {
             "source": "Associative_Rules.R",
-            "target": "Support.png"
+            "target": "Top10Support.png"
         },
         {
             "source": "Associative_Rules.R",
