@@ -23,12 +23,12 @@
         },
         {
             "name": "SVM.R",
-            "task_status": "completed",
+            "task_status": "not started",
             "assigned_to": "ksapaev"
         },
         {
             "name": "Associative_Rules.R",
-            "task_status": "completed",
+            "task_status": "not started",
             "assigned_to": "ksapaev"
         },
         {
