@@ -66,14 +66,14 @@ dev.off()
 
 #Add LTR Column to detect detractor
 #Converting as character
-df$NPS <- as.character(df$NPS_Type)
+df$NPS <- as.character(df$NPS)
 #Defining Promoters and passives as Not Detractors
-df$NPS_Type[df$NPS_Type != "Detractor"] <- "NotDetractor"
+df$NPS[df$NPS != "Detractor"] <- "NotDetractor"
 #Formatting column as factor
-df$NPS_Type <- as.factor(df$NPS_Type)
+df$NPS <- as.factor(df$NPS)
 
 #Adding 'Detractors' column to the NewDF dataframe
-NewDF$Detractors <- df$NPS_Type
+NewDF$Detractors <- df$NPS
 
 
 #Generating rules
@@ -89,11 +89,11 @@ top.confidence.det <- sort(Det_rules, decreasing = TRUE, na.last = NA, by = "con
 inspect(head(top.support.det, 10))
 inspect(head(top.confidence.det, 10))
 
-png(filename="Support.png")
+png(filename="DetractorSupport.png")
 plot(head(top.support.det, 10))
 dev.off()
 
-png(filename="Confidence.png")
+png(filename="DetractorConfidence.png")
 plot(head(top.confidence.det, 10))
 dev.off()
 
@@ -105,10 +105,8 @@ dev.off()
 
 ####################################
 ##### write output file ############
-# add your R code to write Top100Confidence.png
+# add your R code to write Confidence.png
 ####################################
-
-
 
 
 
