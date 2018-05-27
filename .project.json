@@ -50,9 +50,6 @@
             "name": "Support.png"
         },
         {
-            "name": "Confidence.png"
-        },
-        {
             "name": "ProjectWork.R"
         },
         {
@@ -125,10 +122,6 @@
         {
             "source": "Associative_Rules.R",
             "target": "Support.png"
-        },
-        {
-            "source": "Associative_Rules.R",
-            "target": "Confidence.png"
         },
         {
             "source": "Associative_Rules.R",
