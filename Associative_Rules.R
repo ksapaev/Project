@@ -49,7 +49,7 @@ top.support.det <- sort(NPSrulesDet, decreasing = TRUE, na.last = NA, by = "supp
 top.confidence.det <- sort(NPSrulesDet, decreasing = TRUE, na.last = NA, by = "confidence")
 
 
-#Show the rules
+#Plotting the rules
 inspect(top.support.det)
 inspect(top.confidence.det)
 
@@ -74,7 +74,7 @@ top.support.pro <- sort(NPSrulesPro, decreasing = TRUE, na.last = NA, by = "supp
 top.confidence.pro <- sort(NPSrulesPro, decreasing = TRUE, na.last = NA, by = "confidence")
 
 
-#Show the rules
+#Plotting the rules
 inspect(top.support.pro)
 inspect(top.confidence.pro)
 
@@ -88,12 +88,23 @@ dev.off()
 
 
 ##############
-
-goodrulesetdet<-NPSrulesDet[quality(NPSrulesDet)$lift>1.12]
+#Creating good rules for detractors
+goodrulesetdet <- NPSrulesDet[quality(NPSrulesDet)$lift>1.12]
 inspect(goodrulesetdet)
 
-goodrulesetpro<-NPSrulesPro[quality(NPSrulesPro)$lift>1.045]
+#Creating good rules for promoters
+goodrulesetpro <- NPSrulesPro[quality(NPSrulesPro)$lift>1.045]
 inspect(goodrulesetpro)
+
+#Plotting the rules
+png(filename="GoodRulesDetractor.png", width=800, height=600)
+plot(goodrulesetdet)
+dev.off()
+
+png(filename="GoodRulesPromoter.png", width=800, height=600)
+plot(goodrulesetpro)
+dev.off()
+
 
 
 ## end your R code and logic 
