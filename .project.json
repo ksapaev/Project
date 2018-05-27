@@ -56,7 +56,7 @@
             "name": "ProjectWork.R"
         },
         {
-            "name": "Top10Support.png"
+            "name": "ProSupport.png"
         },
         {
             "name": "Top10Confidence.png"
@@ -126,7 +126,7 @@
         },
         {
             "source": "Associative_Rules.R",
-            "target": "Top10Support.png"
+            "target": "ProSupport.png"
         },
         {
             "source": "Associative_Rules.R",
