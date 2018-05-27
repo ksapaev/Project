@@ -77,6 +77,24 @@
             "name": "NPS.R",
             "task_status": "not started",
             "assigned_to": "not assigned"
+        },
+        {
+            "name": "DetSupport.png"
+        },
+        {
+            "name": "DetConfidence.png"
+        },
+        {
+            "name": "ProSupport.png"
+        },
+        {
+            "name": "ProConfidence.png"
+        },
+        {
+            "name": "GoodRulesDetractor.png"
+        },
+        {
+            "name": "GoodRulesPromoter.png"
         }
     ],
     "edges": [
@@ -151,6 +169,30 @@
         {
             "source": "data.csv",
             "target": "NPS.R"
+        },
+        {
+            "source": "Associative_Rules.R",
+            "target": "DetSupport.png"
+        },
+        {
+            "source": "Associative_Rules.R",
+            "target": "DetConfidence.png"
+        },
+        {
+            "source": "Associative_Rules.R",
+            "target": "ProSupport.png"
+        },
+        {
+            "source": "Associative_Rules.R",
+            "target": "ProConfidence.png"
+        },
+        {
+            "source": "Associative_Rules.R",
+            "target": "GoodRulesDetractor.png"
+        },
+        {
+            "source": "Associative_Rules.R",
+            "target": "GoodRulesPromoter.png"
         }
     ]
 }
