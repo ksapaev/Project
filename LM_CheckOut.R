@@ -10,21 +10,56 @@ df <- read.csv('data.csv')
 
 ## start writing your R code from here
 
+library(ggplot2)
 
+#Linear model for Likelihood to Recommend
+
+#LTR - StaffCared
 LinModLTR <- lm(formula=LTR ~ Staff_Cared, data=df)
 summary(LinModLTR)
 
+plot <- ggplot(df, aes(x=Staff_Cared, y=LTR)) +geom_count()+ stat_smooth(method = "lm", formula = y ~ x, se = FALSE, col = "red") 
+plot <- plot + labs(x = "Staff Cared", y = "Likelihood to Recommend")
+plot <- plot  + coord_fixed() + theme_minimal() + scale_x_continuous( breaks = 1:10)+ scale_y_continuous( breaks = 1:10)
+
+png(filename="LTR_StaffCared.png", width=800, height=600)
+plot
+dev.off()
+
+#LTR - RoomSatisfy
 LinModLTR <- lm(formula=LTR ~ Room_Satisfy, data=df)
 summary(LinModLTR)
 
+plot <- ggplot(df, aes(x=Room_Satisfy, y=LTR)) +geom_count()+ stat_smooth(method = "lm", formula = y ~ x, se = FALSE, col = "red") 
+plot <- plot + labs(x = "Room Satisfied", y = "Likelihood to Recommend")
+plot <- plot  + coord_fixed() + theme_minimal() + scale_x_continuous( breaks = 1:10)+ scale_y_continuous( breaks = 1:10)
+
+png(filename="LTR_RoomSatisfied.png", width=800, height=600)
+plot
+dev.off()
+
+#LTR - CustomerService
 LinModLTR <- lm(formula=LTR ~ Customer_Service, data=df)
 summary(LinModLTR)
 
+plot <- ggplot(df, aes(x=Customer_Service, y=LTR)) +geom_count()+ stat_smooth(method = "lm", formula = y ~ x, se = FALSE, col = "red") 
+plot <- plot + labs(x = "Customer Service", y = "Likelihood to Recommend")
+plot <- plot  + coord_fixed() + theme_minimal() + scale_x_continuous( breaks = 1:10)+ scale_y_continuous( breaks = 1:10)
+
+png(filename="LTR_CustomerService.png", width=800, height=600)
+plot
+dev.off()
+
+
+#LTR - StaffCared + RoomSatisfy + CustomerService + LengthOfStay
 LinModLTR <- lm(formula=LTR ~ Customer_Service + Staff_Cared + Room_Satisfy + LengthStay, data=df)
 summary(LinModLTR)
 
 
 
+#############
+
+#Linear model for Overall Satisfaction
 
 LinModSatisfaction <- lm(formula=Overall_Satisfaction ~ Staff_Cared, data=df)
 summary(LinModSatisfaction)
