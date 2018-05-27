@@ -47,13 +47,19 @@
             "assigned_to": "peaponte"
         },
         {
+            "name": "Support.png"
+        },
+        {
+            "name": "Confidence.png"
+        },
+        {
+            "name": "ProjectWork.R"
+        },
+        {
             "name": "Top10Support.png"
         },
         {
             "name": "Top10Confidence.png"
-        },
-        {
-            "name": "ProjectWork.R"
         },
         {
             "name": "Top100Support.png"
@@ -98,6 +104,14 @@
         {
             "source": "data.csv",
             "target": "SVM.R"
+        },
+        {
+            "source": "Associative_Rules.R",
+            "target": "Support.png"
+        },
+        {
+            "source": "Associative_Rules.R",
+            "target": "Confidence.png"
         },
         {
             "source": "Associative_Rules.R",
