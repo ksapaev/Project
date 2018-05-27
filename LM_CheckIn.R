@@ -45,7 +45,7 @@ summary(LinModLTR)
 
 plot <- ggplot(df, aes(x=Hotel_Condition+CheckIn, y=LTR)) +geom_count()+ stat_smooth(method = "lm", formula = y ~ x, se = FALSE, col = "red") 
 plot <- plot + labs(x = "Hotel Condition and Check In", y = "Likelihood to Recommend")
-plot <- plot  + coord_fixed() + theme_minimal() + scale_x_continuous( breaks = 1:10)+ scale_y_continuous( breaks = 1:10)
+plot <- plot  + theme_minimal() + scale_y_continuous( breaks = 1:10)
 
 png(filename="LTR_CheckIn_HC.png", width=800, height=600)
 plot
@@ -87,7 +87,7 @@ summary(LinModSatisfaction)
 
 plot <- ggplot(df, aes(x=Hotel_Condition+CheckIn, y=Overall_Satisfaction)) +geom_count()+ stat_smooth(method = "lm", formula = y ~ x, se = FALSE, col = "red") 
 plot <- plot + labs(x = "Hotel Condition and Check In", y = "Overall Satisfaction")
-plot <- plot  + coord_fixed() + theme_minimal() + scale_x_continuous( breaks = 1:10)+ scale_y_continuous( breaks = 1:10)
+plot <- plot + theme_minimal() + scale_y_continuous( breaks = 1:10)
 
 png(filename="Satisfaction_CheckIn_HC.png", width=800, height=600)
 plot
