@@ -138,6 +138,10 @@
         {
             "source": "Associative_Rules.R",
             "target": "DetractorSupport100.png"
+        },
+        {
+            "source": "Associative_Rules.R",
+            "target": "DetractorConfidence100.png"
         }
     ]
 }
