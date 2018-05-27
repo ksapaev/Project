@@ -20,7 +20,7 @@ plot <- ggplot(df, aes(x=CheckIn, y=LTR)) +geom_count()+ stat_smooth(method = "l
 plot <- plot + labs(x = "Check In", y = "Likelihood to Recommend")
 plot <- plot  + coord_fixed() + theme_minimal() + scale_x_continuous( breaks = 1:10)+ scale_y_continuous( breaks = 1:10)
 
-png(filename="LTR-CheckIn.png", width=800, height=600)
+png(filename="LTR_CheckIn.png", width=800, height=600)
 plot
 dev.off()
 
@@ -32,7 +32,7 @@ plot <- ggplot(df, aes(x=Hotel_Condition, y=LTR)) +geom_count()+ stat_smooth(met
 plot <- plot + labs(x = "Hotel Condition", y = "Likelihood to Recommend")
 plot <- plot  + coord_fixed() + theme_minimal() + scale_x_continuous( breaks = 1:10)+ scale_y_continuous( breaks = 1:10)
 
-png(filename="LTR-HC.png", width=800, height=600)
+png(filename="LTR_HC.png", width=800, height=600)
 plot
 dev.off()
 
@@ -54,7 +54,7 @@ plot <- ggplot(df, aes(x=CheckIn, y=Overall_Satisfaction)) +geom_count()+ stat_s
 plot <- plot + labs(x = "Check In", y = "Overall Satisfaction")
 plot <- plot  + coord_fixed() + theme_minimal() + scale_x_continuous( breaks = 1:10)+ scale_y_continuous( breaks = 1:10)
 
-png(filename="Satisfaction-CheckIn.png", width=800, height=600)
+png(filename="Satisfaction_CheckIn.png", width=800, height=600)
 plot
 dev.off()
 
@@ -66,7 +66,7 @@ plot <- ggplot(df, aes(x=Hotel_Condition, y=Overall_Satisfaction)) +geom_count()
 plot <- plot + labs(x = "Hotel Condition", y = "Overall Satisfaction")
 plot <- plot  + coord_fixed() + theme_minimal() + scale_x_continuous( breaks = 1:10)+ scale_y_continuous( breaks = 1:10)
 
-png(filename="Satisfaction-HC.png", width=800, height=600)
+png(filename="Satisfaction_HC.png", width=800, height=600)
 plot
 dev.off()
 
@@ -100,8 +100,6 @@ LTR2test
 
 ####################################
 ##### write output file ############
-# add your R code to write LTR_HC.png
+# add your R code to write output file
 ####################################
-
-
 
