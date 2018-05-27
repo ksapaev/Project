@@ -10,6 +10,8 @@ df <- read.csv('data.csv')
 
 ## start writing your R code from here
 
+library(ggplot2)
+
 #Linear model for Likelihood to Recommend
 
 #LTR - CheckIn
