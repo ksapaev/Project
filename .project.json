@@ -113,6 +113,9 @@
         },
         {
             "name": "LTR_CheckIn_HC.png"
+        },
+        {
+            "name": "LTR_All.png"
         }
     ],
     "edges": [
@@ -235,6 +238,10 @@
         {
             "source": "LM_CheckIn.R",
             "target": "LTR_CheckIn_HC.png"
+        },
+        {
+            "source": "LM_CheckOut.R",
+            "target": "LTR_All.png"
         }
     ]
 }
