@@ -110,6 +110,9 @@
         },
         {
             "name": "LTR_CustomerService.png"
+        },
+        {
+            "name": "LTR_CheckIn_HC.png"
         }
     ],
     "edges": [
