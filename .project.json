@@ -66,6 +66,9 @@
         },
         {
             "name": "Top100Confidence.png"
+        },
+        {
+            "name": "Frequency.png"
         }
     ],
     "edges": [
@@ -128,6 +131,10 @@
         {
             "source": "Associative_Rules.R",
             "target": "Top100Confidence.png"
+        },
+        {
+            "source": "Associative_Rules.R",
+            "target": "Frequency.png"
         }
     ]
 }
