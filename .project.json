@@ -56,9 +56,6 @@
             "name": "ProjectWork.R"
         },
         {
-            "name": "Top10Support.png"
-        },
-        {
             "name": "Frequency.png"
         },
         {
@@ -132,10 +129,6 @@
         {
             "source": "Associative_Rules.R",
             "target": "Confidence.png"
-        },
-        {
-            "source": "Associative_Rules.R",
-            "target": "Top10Support.png"
         },
         {
             "source": "Associative_Rules.R",
