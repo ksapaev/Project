@@ -12,16 +12,18 @@ df <- read.csv('data.csv')
 
 
 #Create Dataframe with appropriate columns
-NewDF <- data.frame(LengthOfStay=df$LENGTH_OF_STAY_C, GuestCountry=df$Guest_Country_H, Gender=df$Gender_H, AgeRange=df$Age_Range_H, GPTier=df$GP_Tier)
-#NewDF
-#patterns <- random.patterns(df$LENGTH_OF_STAY_C = 1000);
+NewDF <- data.frame(LengthOfStay=df$LengthStay, Gender=df$Gender, AgeRange=df$AgeRange, GPTier=df$GP_Tier, PurposeOfVisit = df$POV,
+                    State = df$StateAbb, Location = df$Location)
+
+
 str(NewDF)
+
 #Convert column 'Length of stay' into a factor
 NewDF$LengthOfStay <- factor(NewDF[ ,1])
 
 
 
-#View Rules
+#Viewing the Rules
 rules <- apriori(NewDF, parameter = list(support=0.01,confidence=0.5))
 summary(rules)
 
