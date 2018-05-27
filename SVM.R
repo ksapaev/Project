@@ -84,8 +84,9 @@ ModelPercentage
 
 ####################################
 ##### write output file ############
-# add your R code to write output file
+# add your R code to write Histogram.png
 ####################################
+
 
 
 
