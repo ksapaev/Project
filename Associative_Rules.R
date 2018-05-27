@@ -31,35 +31,69 @@ trans <- as(NewDF, "transactions")
 summary(trans)
 itemLabels(trans)
 
-
+#################
 #Frequency of support parameter
 png(filename="Frequency.png", width=800, height=600)
 itemFrequencyPlot(trans, support=0.05, cex.names=0.6)
 dev.off()
 
-
-#Creating rules with LHS as NPS types
-NPSrules <- apriori(trans, parameter = list(support = 0.01, confidence = 0.1, minlen = 2, target="rules"), 
+################
+#Creating rules with RHS for DETRACTOR
+NPSrulesDet <- apriori(trans, parameter = list(support = 0.01, confidence = 0.1, minlen = 2, target="rules"), 
                     appearance = list(rhs = "NPS=Detractor", default="lhs"))
 
-summary(NPSrules)
+summary(NPSrulesDet)
 
 #Sorting rules by support and confidence    
-top.support.nps <- sort(NPSrules, decreasing = TRUE, na.last = NA, by = "support")
-top.confidence.nps <- sort(NPSrules, decreasing = TRUE, na.last = NA, by = "confidence")
+top.support.det <- sort(NPSrulesDet, decreasing = TRUE, na.last = NA, by = "support")
+top.confidence.det <- sort(NPSrulesDet, decreasing = TRUE, na.last = NA, by = "confidence")
 
 
 #Show the rules
-inspect(top.support.nps)
-inspect(top.confidence.nps)
+inspect(top.support.det)
+inspect(top.confidence.det)
 
-png(filename="Support.png", width=800, height=600)
-plot(top.support.nps)
+png(filename="DetSupport.png", width=800, height=600)
+plot(top.support.det)
 dev.off()
 
-png(filename="Confidence.png", width=800, height=600)
-plot(top.confidence.nps)
+png(filename="DetConfidence.png", width=800, height=600)
+plot(top.confidence.det)
 dev.off()
+
+
+###############
+#Creating rules with RHS for Promoter
+NPSrulesPro <- apriori(trans, parameter = list(support = 0.1, confidence = 0.5, minlen = 2, target="rules"), 
+                    appearance = list(rhs = "NPS=Promoter", default="lhs"))
+
+summary(NPSrulesPro)
+
+#Sorting rules by support and confidence    
+top.support.pro <- sort(NPSrulesPro, decreasing = TRUE, na.last = NA, by = "support")
+top.confidence.pro <- sort(NPSrulesPro, decreasing = TRUE, na.last = NA, by = "confidence")
+
+
+#Show the rules
+inspect(top.support.pro)
+inspect(top.confidence.pro)
+
+png(filename="ProSupport.png", width=800, height=600)
+plot(top.support.pro)
+dev.off()
+
+png(filename="ProConfidence.png", width=800, height=600)
+plot(top.confidence.pro)
+dev.off()
+
+
+##############
+
+goodrulesetdet<-NPSrulesDet[quality(NPSrulesDet)$lift>1.12]
+inspect(goodrulesetdet)
+
+goodrulesetpro<-NPSrulesPro[quality(NPSrulesPro)$lift>1.045]
+inspect(goodrulesetpro)
 
 
 ## end your R code and logic 
