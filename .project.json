@@ -224,6 +224,10 @@
         {
             "source": "LM_CheckOut.R",
             "target": "LTR_RoomSatisfied.png"
+        },
+        {
+            "source": "LM_CheckOut.R",
+            "target": "LTR_CustomerService.png"
         }
     ]
 }
