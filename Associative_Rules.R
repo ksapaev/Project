@@ -17,7 +17,7 @@ library(kernlab)
 
 #Create Dataframe with appropriate columns
 NewDF <- data.frame(LengthOfStay=df$LengthStay, Gender=df$Gender, AgeRange=df$AgeRange, GPTier=df$GP_Tier, PurposeOfVisit = df$POV,
-                    State = df$StateAbb, Location = df$Location)
+                    State = df$StateAbb, Location = df$Location, NPS = df$NPS)
 
 
 str(NewDF)
@@ -34,6 +34,7 @@ summary(rules)
 #Sorting rules by support and confidence    
 top.support <- sort(rules, decreasing = TRUE, na.last = NA, by = "support")
 top.confidence <- sort(rules, decreasing = TRUE, na.last = NA, by = "confidence")
+
 
 #Show the top 10 rules
 inspect(head(top.support, 10))
@@ -62,55 +63,14 @@ dev.off()
 
 
 
-#Generate rules that predict if someone will be a detractor
-
-#Add LTR Column to detect detractor
-#Converting as character
-df$NPS <- as.character(df$NPS)
-#Defining Promoters and passives as Not Detractors
-df$NPS[df$NPS != "Detractor"] <- "NotDetractor"
-#Formatting column as factor
-df$NPS <- as.factor(df$NPS)
-
-#Adding 'Detractors' column to the NewDF dataframe
-NewDF$Detractors <- df$NPS
-
-
-#Generating rules
-Det_rules <- apriori(NewDF, parameter =list(support=0.01,confidence=0.5))
-summary(Det_rules)
-
-#Sorting rules by support and confidence 
-top.support.det <- sort(Det_rules, decreasing = TRUE, na.last = NA, by = "support")
-top.confidence.det <- sort(Det_rules, decreasing = TRUE, na.last = NA, by = "confidence")
-
-
-#Show the top 10 rules
-inspect(head(top.support.det, 10))
-inspect(head(top.confidence.det, 10))
-
-png(filename="DetractorSupport.png")
-plot(head(top.support.det, 10))
-dev.off()
-
-png(filename="DetractorConfidence.png")
-plot(head(top.confidence.det, 10))
-dev.off()
-
-
-
 
 
 ## end your R code and logic 
 
 ####################################
 ##### write output file ############
-# add your R code to write DetractorConfidence100.png
+# add your R code to write Confidence.png
 ####################################
-
-
-
-
 
 
 
