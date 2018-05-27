@@ -43,6 +43,14 @@ dev.off()
 LinModLTR <- lm(formula=LTR ~ Hotel_Condition + CheckIn, data=df)
 summary(LinModLTR)
 
+plot <- ggplot(df, aes(x=Hotel_Condition+CheckIn, y=LTR)) +geom_count()+ stat_smooth(method = "lm", formula = y ~ x, se = FALSE, col = "red") 
+plot <- plot + labs(x = "Hotel Condition and Check In", y = "Likelihood to Recommend")
+plot <- plot  + coord_fixed() + theme_minimal() + scale_x_continuous( breaks = 1:10)+ scale_y_continuous( breaks = 1:10)
+
+png(filename="LTR_CheckIn_HC.png", width=800, height=600)
+plot
+dev.off()
+
 
 #############
 
