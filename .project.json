@@ -101,6 +101,15 @@
         },
         {
             "name": "LTR_HC.png"
+        },
+        {
+            "name": "LTR_StaffCared.png"
+        },
+        {
+            "name": "LTR_RoomSatisfied.png"
+        },
+        {
+            "name": "LTR_CustomerService.png"
         }
     ],
     "edges": [
@@ -207,6 +216,18 @@
         {
             "source": "LM_CheckIn.R",
             "target": "LTR_HC.png"
+        },
+        {
+            "source": "LM_CheckOut.R",
+            "target": "LTR_StaffCared.png"
+        },
+        {
+            "source": "LM_CheckOut.R",
+            "target": "LTR_RoomSatisfied.png"
+        },
+        {
+            "source": "LM_CheckOut.R",
+            "target": "LTR_CustomerService.png"
         }
     ]
 }
