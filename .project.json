@@ -47,9 +47,6 @@
             "assigned_to": "peaponte"
         },
         {
-            "name": "Confidence.png"
-        },
-        {
             "name": "ProjectWork.R"
         },
         {
@@ -101,10 +98,6 @@
         {
             "source": "data.csv",
             "target": "SVM.R"
-        },
-        {
-            "source": "Associative_Rules.R",
-            "target": "Confidence.png"
         },
         {
             "source": "Associative_Rules.R",
