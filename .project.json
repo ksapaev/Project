@@ -252,6 +252,10 @@
         {
             "source": "Descriptive_Statistics.R",
             "target": "histogramLTR.png"
+        },
+        {
+            "source": "Descriptive_Statistics.R",
+            "target": "HistogramCheckIn.png"
         }
     ]
 }
