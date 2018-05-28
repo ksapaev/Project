@@ -46,12 +46,24 @@ sd(data$Customer_Service)
 sd(data$Staff_Cared)
 
 #Create histogram
-hist(data$LTR, breaks = 20)
-hist(data$Room_Satisfy, breaks = 20)
-hist(data$CheckIn, breaks = 20)
-hist(data$Hotel_Condition, breaks = 20)
-hist(data$Customer_Service, breaks = 20)
-hist(data$Staff_Cared, breaks = 20)
+HistogramLTR <- hist(data$LTR, breaks = 20)
+HistogramLTR
+png("HistogramLTR")
+HistogramRoomSat <- hist(data$Room_Satisfy, breaks = 20)
+HistogramRoomSat
+png("HistogramRoomSat")
+HistogramCheckIn <- hist(data$CheckIn, breaks = 20)
+HistogramCheckIn
+png("HistogramCheckIn")
+HistogramHotelC <- hist(data$Hotel_Condition, breaks = 20)
+HistogramHotelC
+png("HistogramHotelC")
+HistogramCustServ <- hist(data$Customer_Service, breaks = 20)
+HistogramCustServ
+png("HistogramCustServ")
+HistogramStaffCared <- hist(data$Staff_Cared, breaks = 20)
+HistogramStaffCared
+png("HistogramStaffCared")
 #hist(df$Col, breaks=20)
 
 
