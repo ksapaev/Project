@@ -48,22 +48,44 @@ sd(data$Staff_Cared)
 #Create histogram
 HistogramLTR <- hist(data$LTR, breaks = 20)
 HistogramLTR
-png("HistogramLTR")
+
 HistogramRoomSat <- hist(data$Room_Satisfy, breaks = 20)
 HistogramRoomSat
-png("HistogramRoomSat")
+
 HistogramCheckIn <- hist(data$CheckIn, breaks = 20)
 HistogramCheckIn
-png("HistogramCheckIn")
+
 HistogramHotelC <- hist(data$Hotel_Condition, breaks = 20)
 HistogramHotelC
-png("HistogramHotelC")
+
 HistogramCustServ <- hist(data$Customer_Service, breaks = 20)
 HistogramCustServ
-png("HistogramCustServ")
+
 HistogramStaffCared <- hist(data$Staff_Cared, breaks = 20)
 HistogramStaffCared
-png("HistogramStaffCared")
+
+#Create PNG file
+
+png(filename="HistogramLTR.png", width=800, height=600)
+plot(HistogramLTR)
+dev.off()
+
+png(filename="HistogramRoomSat.png", width=800, height=600)
+plot(HistogramRoomSat)
+dev.off()
+
+png(filename="HistogramCheckIn.png", width=800, height=600)
+plot(HistogramCheckIn)
+dev.off()
+
+png(filename="HistogramHotelC.png", width=800, height=600)
+plot(HistogramHotelC)
+dev.off()
+
+png(filename="HistogramStaffCared.png", width=800, height=600)
+plot(HistogramStaffCared)
+dev.off()
+
 #hist(df$Col, breaks=20)
 
 
