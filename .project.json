@@ -118,7 +118,7 @@
             "name": "LTR_All.png"
         },
         {
-            "name": "histogramLTR.png"
+            "name": "HistogramLTR.png"
         },
         {
             "name": "HistogramRoomSat.png"
@@ -134,6 +134,18 @@
         },
         {
             "name": "HistogramStaffCared.png"
+        },
+        {
+            "name": "myPlotLTRReg.png"
+        },
+        {
+            "name": "myPlotRevRoomType.png"
+        },
+        {
+            "name": "myPlotRevLength.png"
+        },
+        {
+            "name": "histogramLTR.png"
         }
     ],
     "edges": [
@@ -263,7 +275,7 @@
         },
         {
             "source": "Descriptive_Statistics.R",
-            "target": "histogramLTR.png"
+            "target": "HistogramLTR.png"
         },
         {
             "source": "Descriptive_Statistics.R",
@@ -272,6 +284,34 @@
         {
             "source": "SVM.R",
             "target": "Histogram.png"
+        },
+        {
+            "source": "Descriptive_Statistics.R",
+            "target": "HistogramStaffCared.png"
+        },
+        {
+            "source": "Descriptive_Statistics.R",
+            "target": "HistogramCustServ.png"
+        },
+        {
+            "source": "Descriptive_Statistics.R",
+            "target": "HistogramHotelC.png"
+        },
+        {
+            "source": "Visualization.R",
+            "target": "myPlotLTRReg.png"
+        },
+        {
+            "source": "Visualization.R",
+            "target": "myPlotRevLength.png"
+        },
+        {
+            "source": "Visualization.R",
+            "target": "myPlotRevRoomType.png"
+        },
+        {
+            "source": "Descriptive_Statistics.R",
+            "target": "histogramLTR.png"
         }
     ]
 }
