@@ -47,7 +47,7 @@ myPlotRevLength <- myPlotRevLength + aes(x=LengthStay) + aes(y= Revenue)
 myPlotRevLength <- myPlotRevLength + geom_col( fill="pink", col="black") + ggtitle("Revenue compared to Length of Stay" )
 myPlotRevLength
 
-#Creating proper y and x axis with plot for Revenue compared Length of Stay
+#Creating proper y and x axis with plot for Purpose of Visit compared Length of Stay
 #Divide LTR to the number of rows in business and leisure 
 MeanLTR <- mean(data$LTR)
 myPlotPOVLTR <- ggplot(data) 
@@ -55,7 +55,7 @@ myPlotPOVLTR <- myPlotPOVLTR + aes(x= POV) + aes(y= MeanLTR )
 
 
 #Choosing color and title for Revenue compared Length of Stay
-myPlotPOVLTR <- myPlotPOVLTR + geom_col( fill="pink", col="black") + ggtitle("Revenue compared to Length of Stay" )
+myPlotPOVLTR <- myPlotPOVLTR + geom_col( fill="pink", col="black") + ggtitle("Purpose of Visit compared to Length of Stay" )
 myPlotPOVLTR
 
 summary(data$LTR)
