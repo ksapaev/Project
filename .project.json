@@ -272,6 +272,18 @@
         {
             "source": "SVM.R",
             "target": "Histogram.png"
+        },
+        {
+            "source": "Descriptive_Statistics.R",
+            "target": "HistogramStaffCared.png"
+        },
+        {
+            "source": "Descriptive_Statistics.R",
+            "target": "HistogramCustServ.png"
+        },
+        {
+            "source": "Descriptive_Statistics.R",
+            "target": "HistogramHotelC.png"
         }
     ]
 }
