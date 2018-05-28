@@ -94,13 +94,3 @@ LeHMap
 
 
 #####################################################################
-#Creating proper y and x axis with plot
-#myColorNpsSt <- ggplot(dfNM)
-#myColorNpsSt <- myColorNpsSt + aes(x=State) + aes(y= avg.NPS)
-
-#Last bar chart with color 
-#myColorNpsSt <- myColorNpsSt + aes(x=State) + aes(y= avg.NPS)
-
-#Choosing color and title for second Barchart
-#myColorNpsSt <- myColorNpsSt + geom_col( fill=avg.NPS, col="black") + ggtitle("Colored Average NPS by state" )
-#myColorNpsSt
