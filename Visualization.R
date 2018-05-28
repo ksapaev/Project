@@ -50,13 +50,15 @@ myPlotRevLength
 #Creating proper y and x axis with plot for Revenue compared Length of Stay
 
 myPlotPOVLTR <- ggplot(data) 
-myPlotPOVLTR <- myPlotPOVLTR + aes(x= POV) + aes(y= LTR)
+myPlotPOVLTR <- myPlotPOVLTR + aes(x= POV) + aes(y= LTR )
 
 
 #Choosing color and title for Revenue compared Length of Stay
 myPlotPOVLTR <- myPlotPOVLTR + geom_col( fill="pink", col="black") + ggtitle("Revenue compared to Length of Stay" )
 myPlotPOVLTR
 
+summary(data$LTR)
+summary(data$POV)
 #Divide LTR to the number of rows in business and leisure 
 #MeanLTR <- mean(data$LTR, data$POV)
 
@@ -77,9 +79,11 @@ png(filename="myPlotAgeRev.png", width=800, height=600)
 plot(myPlotAgeRev)
 dev.off()
 
+#df <- data.frame(data)
 #HeatMap
-
-
+mode(data)
+LeHMap <- heatmap(as.matrix(data), main = "Hotel Data", trace= "none", margins = c(10,15))
+LeHMap
 
 ## end your R code and logic 
 
