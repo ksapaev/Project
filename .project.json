@@ -134,6 +134,9 @@
         },
         {
             "name": "HistogramStaffCared.png"
+        },
+        {
+            "name": "myPlotLTRReg.png"
         }
     ],
     "edges": [
