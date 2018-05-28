@@ -16,9 +16,10 @@ library(ggmap)
 
 myPlotLTRReg <- ggplot(data)
 
+#Find mean of LTR for each region using tapply
 
 #Creating proper y and x axis with plot for LTR compared to region
-myPlotLTRReg <- myPlotLTRReg + aes(x=LTR) + aes(y= Region)
+myPlotLTRReg <- myPlotLTRReg + aes(x=Region) + aes(y= LTR)
 
 
 #Choosing color and title
@@ -27,22 +28,37 @@ plot(myPlotLTRReg)
 myPlotLTRReg
 
 #Creating proper y and x axis with plot for Revenue compared Room Type
-myPlotRevRoomType <- ggplot(data)
-myPlotRevRoomType <- myPlotRevRoomType + aes(x= Revenue) + aes(y= RoomType)
+#Convert 
+
+myPlotAgeRev <- ggplot(data)
+myPlotAgeRev <- myPlotAgeRev + aes(x= AgeRange) + aes(y= Revenue)
 
 #Choosing color and title
-myPlotRevRoomType <- myPlotRevRoomType + geom_col( fill="green", col="black") + ggtitle("Revenue compared to Room Type" )
-myPlotRevRoomType
+myPlotAgeRev <- myPlotAgeRev + geom_col( fill="green", col="black") + ggtitle("Revenue compared to Age Range" )
+myPlotAgeRev
 
 #Creating proper y and x axis with plot for Revenue compared Length of Stay
+#Tranform Revenue to logorithm2
 myPlotRevLength <- ggplot(data)
-myPlotRevLength <- myPlotRevLength + aes(x=Revenue) + aes(y= LengthStay)
+myPlotRevLength <- myPlotRevLength + aes(x=LengthStay) + aes(y= Revenue)
 
 
 #Choosing color and title for Revenue compared Length of Stay
 myPlotRevLength <- myPlotRevLength + geom_col( fill="pink", col="black") + ggtitle("Revenue compared to Length of Stay" )
 myPlotRevLength
 
+#Creating proper y and x axis with plot for Revenue compared Length of Stay
+
+myPlotPOVLTR <- ggplot(data) 
+myPlotPOVLTR <- myPlotPOVLTR + aes(x= POV) + aes(y= LTR)
+
+
+#Choosing color and title for Revenue compared Length of Stay
+myPlotPOVLTR <- myPlotPOVLTR + geom_col( fill="pink", col="black") + ggtitle("Revenue compared to Length of Stay" )
+myPlotPOVLTR
+
+#Divide LTR to the number of rows in business and leisure 
+#MeanLTR <- mean(data$LTR, data$POV)
 
 #Plot to png
 png(filename="myPlotRevLength.png", width=800, height=600)
@@ -56,6 +72,14 @@ dev.off()
 png(filename="myPlotLTRReg.png", width=800, height=600)
 plot(myPlotLTRReg)
 dev.off()
+
+png(filename="myPlotAgeRev.png", width=800, height=600)
+plot(myPlotAgeRev)
+dev.off()
+
+#HeatMap
+
+
 
 ## end your R code and logic 
 
