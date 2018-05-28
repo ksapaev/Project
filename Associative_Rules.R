@@ -17,7 +17,7 @@ library(kernlab)
 
 #Create Dataframe with appropriate columns
 NewDF <- data.frame(LengthOfStay=df$LengthStay, Gender=df$Gender, AgeRange=df$AgeRange, GPTier=df$GP_Tier, PurposeOfVisit = df$POV,
-                    State = df$StateAbb, Location = df$Location, NPS = df$NPS)
+                    State = df$StateAbb, Location = df$Location, Country = df$Country, NPS = df$NPS)
 
 
 #Convert column 'Length of stay' into a factor
@@ -34,7 +34,7 @@ itemLabels(trans)
 #################
 #Frequency of support parameter
 png(filename="Frequency.png", width=800, height=600)
-itemFrequencyPlot(trans, support=0.05, cex.names=0.6)
+itemFrequencyPlot(trans, support=0.05, cex.names=0.9)
 dev.off()
 
 ################
@@ -50,8 +50,8 @@ top.confidence.det <- sort(NPSrulesDet, decreasing = TRUE, na.last = NA, by = "c
 
 
 #Plotting the rules
-inspect(top.support.det)
-inspect(top.confidence.det)
+inspect(head(top.support.det,10))
+inspect(head(top.confidence.det,10))
 
 png(filename="DetSupport.png", width=800, height=600)
 plot(top.support.det)
@@ -75,8 +75,8 @@ top.confidence.pro <- sort(NPSrulesPro, decreasing = TRUE, na.last = NA, by = "c
 
 
 #Plotting the rules
-inspect(top.support.pro)
-inspect(top.confidence.pro)
+inspect(head(top.support.pro, 10))
+inspect(head(top.confidence.pro, 10))
 
 png(filename="ProSupport.png", width=800, height=600)
 plot(top.support.pro)
