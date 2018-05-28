@@ -143,6 +143,9 @@
         },
         {
             "name": "myPlotRevLength.png"
+        },
+        {
+            "name": "histogramLTR.png"
         }
     ],
     "edges": [
@@ -305,6 +308,10 @@
         {
             "source": "Visualization.R",
             "target": "myPlotRevRoomType.png"
+        },
+        {
+            "source": "Descriptive_Statistics.R",
+            "target": "histogramLTR.png"
         }
     ]
 }
