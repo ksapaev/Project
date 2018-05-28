@@ -301,6 +301,10 @@
         {
             "source": "Visualization.R",
             "target": "myPlotRevLength.png"
+        },
+        {
+            "source": "Visualization.R",
+            "target": "myPlotRevRoomType.png"
         }
     ]
 }
