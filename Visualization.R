@@ -40,7 +40,7 @@ myPlotRevLength <- myPlotRevLength + aes(x=Revenue) + aes(y= LengthStay)
 
 
 #Choosing color and title for Revenue compared Length of Stay
-myPlotRevLength <- myPlotRevLength + geom_col( fill="pink", col="black") + ggtitle("Average NPS by state" )
+myPlotRevLength <- myPlotRevLength + geom_col( fill="pink", col="black") + ggtitle("Revenue compared to Length of Stay" )
 myPlotRevLength
 
 
