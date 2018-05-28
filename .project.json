@@ -280,6 +280,10 @@
         {
             "source": "Descriptive_Statistics.R",
             "target": "HistogramCustServ.png"
+        },
+        {
+            "source": "Descriptive_Statistics.R",
+            "target": "HistogramHotelC.png"
         }
     ]
 }
