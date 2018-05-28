@@ -248,6 +248,10 @@
         {
             "source": "LM_CheckOut.R",
             "target": "LTR_All.png"
+        },
+        {
+            "source": "Probability.R",
+            "target": "histogramLTR.png"
         }
     ]
 }
