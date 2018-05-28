@@ -125,6 +125,15 @@
         },
         {
             "name": "Histogram.png"
+        },
+        {
+            "name": "HistogramHotelC.png"
+        },
+        {
+            "name": "HistogramCustServ.png"
+        },
+        {
+            "name": "HistogramStaffCared.png"
         }
     ],
     "edges": [
