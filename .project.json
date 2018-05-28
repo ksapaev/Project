@@ -134,6 +134,15 @@
         },
         {
             "name": "HistogramStaffCared.png"
+        },
+        {
+            "name": "myPlotLTRReg.png"
+        },
+        {
+            "name": "myPlotRevRoomType.png"
+        },
+        {
+            "name": "myPlotRevLength.png"
         }
     ],
     "edges": [
@@ -284,6 +293,18 @@
         {
             "source": "Descriptive_Statistics.R",
             "target": "HistogramHotelC.png"
+        },
+        {
+            "source": "Visualization.R",
+            "target": "myPlotLTRReg.png"
+        },
+        {
+            "source": "Visualization.R",
+            "target": "myPlotRevLength.png"
+        },
+        {
+            "source": "Visualization.R",
+            "target": "myPlotRevRoomType.png"
         }
     ]
 }
