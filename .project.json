@@ -246,10 +246,6 @@
             "target": "LTR_All.png"
         },
         {
-            "source": "Probability.R",
-            "target": "histogramLTR.png"
-        },
-        {
             "source": "Descriptive_Statistics.R",
             "target": "HistogramRoomSat.png"
         }
