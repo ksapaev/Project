@@ -124,6 +124,9 @@
             "name": "HistogramRoomSat.png"
         },
         {
+            "name": "Histogram.png"
+        },
+        {
             "name": "HistogramHotelC.png"
         },
         {
@@ -265,6 +268,10 @@
         {
             "source": "Descriptive_Statistics.R",
             "target": "HistogramCheckIn.png"
+        },
+        {
+            "source": "SVM.R",
+            "target": "Histogram.png"
         }
     ]
 }
