@@ -71,7 +71,7 @@
             "name": "Frequency.png"
         },
         {
-            "name": "Histogram.png"
+            "name": "HistogramCheckIn.png"
         },
         {
             "name": "NPS.R",
@@ -116,6 +116,15 @@
         },
         {
             "name": "LTR_All.png"
+        },
+        {
+            "name": "histogramLTR.png"
+        },
+        {
+            "name": "HistogramRoomSat.png"
+        },
+        {
+            "name": "Histogram.png"
         }
     ],
     "edges": [
@@ -184,10 +193,6 @@
             "target": "Frequency.png"
         },
         {
-            "source": "SVM.R",
-            "target": "Histogram.png"
-        },
-        {
             "source": "data.csv",
             "target": "NPS.R"
         },
@@ -242,6 +247,22 @@
         {
             "source": "LM_CheckOut.R",
             "target": "LTR_All.png"
+        },
+        {
+            "source": "Descriptive_Statistics.R",
+            "target": "HistogramRoomSat.png"
+        },
+        {
+            "source": "Descriptive_Statistics.R",
+            "target": "histogramLTR.png"
+        },
+        {
+            "source": "Descriptive_Statistics.R",
+            "target": "HistogramCheckIn.png"
+        },
+        {
+            "source": "SVM.R",
+            "target": "Histogram.png"
         }
     ]
 }
