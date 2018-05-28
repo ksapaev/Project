@@ -71,8 +71,9 @@ png("HistogramStaffCared")
 
 ####################################
 ##### write output file ############
-# add your R code to write HistogramStaffCared.png
+# add your R code to write HistogramCustServ.png
 ####################################
+
 
 
 
