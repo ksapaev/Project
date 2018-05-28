@@ -10,24 +10,26 @@ df <- read.csv('data.csv')
 
 ## start writing your R code from here
 #Descriptive Stats
+library(modeest)
 
-#Find mean 
-mean(data$LTR)
-mean(data$Room_Satisfy)
-mean(data$CheckIn)
-mean(data$Hotel_Condition)
-mean(data$Customer_Service)
-mean(data$Staff_Cared)
+#Find MFV for mode PPT day 
+mfv(data$LTR, na.rm = TRUE)
+mfv(data$Room_Satisfy, na.rm = TRUE)
+mfv(data$CheckIn, na.rm = TRUE)
+mfv(data$Hotel_Condition, na.rm = TRUE)
+mfv(data$Customer_Service, na.rm = TRUE)
+mfv(data$Staff_Cared, na.rm = TRUE)
 
-#Find median
-median(data$LTR)
-median(data$Room_Satisfy)
-median(data$CheckIn)
-median(data$Hotel_Condition)
-median(data$Customer_Service)
-median(data$Staff_Cared)
+#Find Summary
+summary(data$LTR)
+summary(data$Room_Satisfy)
+summary(data$CheckIn)
+summary(data$Hotel_Condition)
+summary(data$Customer_Service)
+summary(data$Staff_Cared)
 
-#Find Range
+
+
 #Find Standard Deviation
 
 sd(data$LTR)
@@ -38,24 +40,61 @@ sd(data$Customer_Service)
 sd(data$Staff_Cared)
 
 #Create histogram
-HistogramLTR <- hist(data$LTR, breaks = 20)
-HistogramLTR
+#Change title and x axis
 
-HistogramRoomSat <- hist(data$Room_Satisfy, breaks = 20)
-HistogramRoomSat
+HistogramLTR <- hist(data$LTR, 
+     main="Histogram for Likelihood to recommend", 
+     xlab= "likelihood to recommend", 
+     border="blue", 
+     col="green",
+     xlim=c(0,10),
+     las=1, 
+     breaks=5)
 
-HistogramCheckIn <- hist(data$CheckIn, breaks = 20)
-HistogramCheckIn
+HistogramRoomSat <- hist(data$Room_Satisfy, 
+     main="Histogram for Room Satisfaction", 
+     xlab= "Room Satisfaction", 
+     border="blue", 
+     col="green",
+     xlim=c(0,10),
+     las=1, 
+     breaks=5)
 
-HistogramHotelC <- hist(data$Hotel_Condition, breaks = 20)
-HistogramHotelC
+HistogramCheckIn <- hist(data$CheckIn, 
+     main="Histogram for Check in", 
+     xlab= "Check In", 
+     border="blue", 
+     col="green",
+     xlim=c(0,10),
+     las=1, 
+     breaks=5)
 
-HistogramCustServ <- hist(data$Customer_Service, breaks = 20)
-HistogramCustServ
+HistogramHotelC <- hist(data$Hotel_Condition, 
+     main="Histogram for Hotel Condition", 
+     xlab= "Hotel Condition", 
+     border="blue", 
+     col="green",
+     xlim=c(0,10),
+     las=1, 
+     breaks=5)
 
-HistogramStaffCared <- hist(data$Staff_Cared, breaks = 20)
-HistogramStaffCared
+HistogramCustServ <- hist(data$Customer_Service, 
+     main="Histogram for Customer Service", 
+     xlab= "Customer Service", 
+     border="blue", 
+     col="green",
+     xlim=c(0,10),
+     las=1, 
+     breaks=5)
 
+HistogramStaffCared <- hist(data$Staff_Cared, 
+     main="Histogram for Staff Cared", 
+     xlab= "Staff Care", 
+     border="blue", 
+     col="green",
+     xlim=c(0,10),
+     las=1, 
+     breaks=5)
 #Create PNG file
 
 png(filename="HistogramLTR.png", width=800, height=600)
