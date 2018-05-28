@@ -16,7 +16,7 @@ df <- read.csv('data.csv')
 
 ####################################
 ##### write output file ############
-# add your R code to write output file
+# add your R code to write myPlotLTRReg.png
 ####################################
 
 library(ggplot2)
@@ -62,4 +62,4 @@ myColorNpsSt <- myColorNpsSt + aes(x=State) + aes(y= avg.NPS)
 
 #Choosing color and title for second Barchart
 myColorNpsSt <- myColorNpsSt + geom_col( fill=avg.NPS, col="black") + ggtitle("Colored Average NPS by state" )
-myColorNpsSt
+myColorNpsStmyColorNpsSt
