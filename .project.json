@@ -293,6 +293,10 @@
         {
             "source": "Descriptive_Statistics.R",
             "target": "HistogramHotelC.png"
+        },
+        {
+            "source": "Visualization.R",
+            "target": "myPlotLTRReg.png"
         }
     ]
 }
