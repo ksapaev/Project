@@ -122,6 +122,9 @@
         },
         {
             "name": "HistogramRoomSat.png"
+        },
+        {
+            "name": "Histogram.png"
         }
     ],
     "edges": [
@@ -256,6 +259,10 @@
         {
             "source": "Descriptive_Statistics.R",
             "target": "HistogramCheckIn.png"
+        },
+        {
+            "source": "SVM.R",
+            "target": "Histogram.png"
         }
     ]
 }
