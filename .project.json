@@ -248,6 +248,10 @@
         {
             "source": "Descriptive_Statistics.R",
             "target": "HistogramRoomSat.png"
+        },
+        {
+            "source": "Descriptive_Statistics.R",
+            "target": "histogramLTR.png"
         }
     ]
 }
