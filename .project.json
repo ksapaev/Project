@@ -50,9 +50,6 @@
             "name": "ProjectWork.R"
         },
         {
-            "name": "Top100Support.png"
-        },
-        {
             "name": "Top100Confidence.png"
         },
         {
@@ -151,10 +148,6 @@
         {
             "source": "data.csv",
             "target": "SVM.R"
-        },
-        {
-            "source": "Associative_Rules.R",
-            "target": "Top100Support.png"
         },
         {
             "source": "Associative_Rules.R",
