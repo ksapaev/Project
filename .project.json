@@ -118,7 +118,7 @@
             "name": "LTR_All.png"
         },
         {
-            "name": "histogramLTR.png"
+            "name": "HistogramLTR.png"
         },
         {
             "name": "HistogramRoomSat.png"
@@ -263,7 +263,7 @@
         },
         {
             "source": "Descriptive_Statistics.R",
-            "target": "histogramLTR.png"
+            "target": "HistogramLTR.png"
         },
         {
             "source": "Descriptive_Statistics.R",
