@@ -27,14 +27,6 @@ median(data$Hotel_Condition)
 median(data$Customer_Service)
 median(data$Staff_Cared)
 
-#Find mode
-mode(data$LTR)
-mode(data$Room_Satisfy)
-mode(data$CheckIn)
-mode(data$Hotel_Condition)
-mode(data$Customer_Service)
-mode(data$Staff_Cared)
-
 #Find Range
 #Find Standard Deviation
 
