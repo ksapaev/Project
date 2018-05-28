@@ -59,8 +59,9 @@ hist(data$Staff_Cared, breaks = 20)
 
 ####################################
 ##### write output file ############
-# add your R code to write HistogramRoomSat.png
+# add your R code to write histogramLTR.png
 ####################################
+
 
 
 
