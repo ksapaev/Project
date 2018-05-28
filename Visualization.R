@@ -19,32 +19,40 @@ df <- read.csv('data.csv')
 # add your R code to write output file
 ####################################
 
-
+library(ggplot2)
+library(ggmap)
 
 ###Example ggplot to base off of
-myPlotAvg <- ggplot(dfNM)
+myPlotLTR.Reg <- ggplot(data)
 
 
-#Creating proper y and x axis with plot
-myPlotAvg <- myPlotAvg + aes(x=State) + aes(y= avg.NPS)
+#Creating proper y and x axis with plot for LTR compared to region
+myPlotLTR.Reg <- myPlotLTR.Reg + aes(x=LTR) + aes(y= Region)
 
 
 #Choosing color and title
-myPlotAvg <- myPlotAvg + geom_col( fill="blue", col="black") + ggtitle("Mean NPS by State" )
-myPlotAvg
+myPlotLTR.Reg <- myPlotLTR.Reg + geom_col( fill="blue", col="black") + ggtitle("LTR compared to Region" )
+plot(myPlotLTR.Reg)
+myPlotLTR.Reg
 
-#Creating proper y and x axis with plot
-myPlotNpsSt <- ggplot(dfNM)
-myPlotNpsSt <- myPlotNpsSt + aes(x=State) + aes(y= avg.NPS)
+#Creating proper y and x axis with plot for Revenue compared Room Type
+myPlotRevRoomType <- ggplot(data)
+myPlotRevRoomType <- myPlotRevRoomType + aes(x= Revenue) + aes(y= RoomType)
 
-#Different Barchart where the x-axis is sorted by NPS of state
-myPlotNpsSt <- myPlotNpsSt + aes(x=avg.NPS) + aes(y= State)
+#Choosing color and title
+myPlotRevRoomType <- myPlotRevRoomType + geom_col( fill="green", col="black") + ggtitle("Revenue compared to Room Type" )
+myPlotRevRoomType
+
+#Creating proper y and x axis with plot for Revenue compared Length of Stay
+myPlotRevLength <- ggplot(data)
+myPlotRevLength <- myPlotRevLength + aes(x=Revenue) + aes(y= LengthStay)
 
 
-#Choosing color and title for second Barchart
-myPlotNpsSt <- myPlotNpsSt + geom_col( fill="pink", col="black") + ggtitle("Average NPS by state" )
-myPlotNpsSt
+#Choosing color and title for Revenue compared Length of Stay
+myPlotRevLength <- myPlotRevLength + geom_col( fill="pink", col="black") + ggtitle("Average NPS by state" )
+myPlotRevLength
 
+#####################################################################
 #Creating proper y and x axis with plot
 myColorNpsSt <- ggplot(dfNM)
 myColorNpsSt <- myColorNpsSt + aes(x=State) + aes(y= avg.NPS)
